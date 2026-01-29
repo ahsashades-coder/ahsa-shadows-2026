@@ -1,0 +1,206 @@
+<header class="header-main">
+    
+    <div class="header-right">
+        <a href="tel:0551987351" class="call-btn-oval">اتصل الآن</a>
+    </div>
+
+    <div class="brand-left">
+        <div class="brand-details">
+            <h1>مظلات سواتر الهفوف</h1>
+            <p>الأحساء والمنطقة الشرقية 2026</p>
+        </div>
+        <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="Logo" class="logo-img">
+    </div>
+
+</header>
+
+<style>
+    :root { --navy: #0a192f; --gold: #c5a059; --white: #ffffff; }
+
+    .header-main {
+        background: var(--white);
+        padding: 10px 5%;
+        display: flex;
+        justify-content: space-between; /* يضمن توزيع العناصر بين اليمين واليسار */
+        align-items: center;
+        border-bottom: 3px solid var(--gold);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* تنسيق زر اليمين */
+    .header-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .call-btn-oval {
+        background: var(--navy);
+        color: var(--gold);
+        padding: 10px 25px;
+        border-radius: 50px; /* شكل بيضاوي */
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 0.9rem;
+        border: 2px solid var(--gold);
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    .call-btn-oval:hover {
+        background: var(--gold);
+        color: var(--navy);
+    }
+
+    /* تنسيق اليسار (الشعار والاسم) */
+    .brand-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .brand-details {
+        text-align: left; /* محاذاة النص لليسار بجانب الشعار */
+    }
+
+    .brand-details h1 {
+        color: var(--navy);
+        font-size: 1.1rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .brand-details p {
+        color: var(--gold);
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .logo-img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid var(--gold);
+        object-fit: cover;
+    }
+
+    /* تعديل للجوال */
+    @media (max-width: 600px) {
+        .brand-details h1 { font-size: 0.95rem; }
+        .call-btn-oval { padding: 8px 18px; font-size: 0.8rem; }
+        .logo-img { width: 45px; height: 45px; }
+    }
+</style>
+    <section class="gallery-container">
+        <div class="gallery-title">
+            <h2 style="color: var(--navy);">معرض أعمالنا (قراميد 2026)</h2>
+            <p>أفضل تصاميم القرميد في الأحساء والهفوف</p>
+        </div>
+        <div class="gallery-grid">
+            
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/fLy25ZH3/5447603825691790814-119.jpg" alt="قرميد إسباني"></div>
+                <div class="key-word">تركيب قرميد إسباني فخم</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/FRzWGmPY/5447603825691790814-121.jpg" alt="قرميد إيطالي"></div>
+                <div class="key-word">قرميد إيطالي عازل للحرارة</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818-121.jpg" alt="ديكور قرميد"></div>
+                <div class="key-word">ديكورات أسطح قرميد مودرن</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/PxJ3Kh6q/5447603825691790819-121.jpg" alt="قرميد فلل"></div>
+                <div class="key-word">قرميد واجهات فلل وقصور</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/wvMfFHWd/5447603825691790820-121.jpg" alt="قرميد أحمر"></div>
+                <div class="key-word">قرميد وطني فخاري أحمر</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/B6bYNsh0/5447603825691790821-121.jpg" alt="قرميد كحلي"></div>
+                <div class="key-word">قرميد أزرق كحلي ملكي</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg" alt="قرميد معدني"></div>
+                <div class="key-word">تركيب قرميد معدني مع العزل</div>
+            </div>
+
+            <div class="card-item">
+                <div class="gallery-item"><img src="https://i.postimg.cc/ydxQnBfC/5447603825691790825-121.jpg" alt="قرميد أسود"></div>
+                <div class="key-word">قرميد أسود مطفي حديث</div>
+            </div>
+
+        </div>
+    </section>
+
+<style>
+    /* إضافة تنسيق الكلمات المفتاحية تحت الصور */
+    .card-item {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        padding-bottom: 15px;
+        border: 1px solid #eee;
+    }
+    .key-word {
+        padding: 10px 5px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--navy);
+        background: #fdfaf4;
+        margin-top: 5px;
+    }
+    .gallery-item {
+        height: 250px; /* تقليل الارتفاع قليلاً لتناسب الكلمات */
+        overflow: hidden;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+    }
+    .card-item:hover img {
+        transform: scale(1.1);
+    }
+</style>
+<!-- الفوتر -->
+    <footer style="background-color:#0a192f; color:#c5a059; padding:30px 5%; font-family:'Cairo',sans-serif; text-align:center; margin-top:50px;">
+        <!-- روابط تواصل -->
+        <div style="margin-bottom:20px;">
+            <a href="https://www.tiktok.com/@ahsa.shades?_r=1&_t=ZS-93S8hg9LC69" target="_blank" style="color:#c5a059; margin:0 10px; font-size:1.2rem;"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/al_ahsa_mizalaat?igsh=OWN1OHliaTN6c25h" target="_blank" style="color:#c5a059; margin:0 10px; font-size:1.2rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/solomons456" target="_blank" style="color:#c5a059; margin:0 10px; font-size:1.2rem;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/share/17bH96Jg11/" target="_blank" style="color:#c5a059; margin:0 10px; font-size:1.2rem;"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/c/966552075677" target="_blank" style="color:#c5a059; margin:0 10px; font-size:1.2rem;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <!-- معلومات الاتصال -->
+        <div style="margin-bottom:20px; font-size:0.95rem;">
+            البريد الإلكتروني: <a href="mailto:ahsa.shades@gmail.com" style="color:#d4b57f;">ahsa.shades@gmail.com</a><br>
+            الهاتف: <a href="tel:+966552075677" style="color:#d4b57f;">+966 552075677</a>
+        </div>
+
+        <!-- حقوق النشر -->
+        <div style="font-size:0.85rem; margin-top:10px; color:#d4b57f;">
+            &copy; 2026 جميع الحقوق محفوظة لموقع مظلات وسواتر الأحساء<br>
+            تم التصميم والتطوير بواسطة <strong>سليمان الحكمي</strong>
+        </div>
+    </footer>
+
+</body>
+</html>
