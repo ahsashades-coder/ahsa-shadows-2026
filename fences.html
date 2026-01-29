@@ -1,0 +1,555 @@
+<header class="branded-slim-header">
+    <div class="header-container">
+        
+        <div class="header-logo-side">
+            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مقاولات الأحساء" class="site-logo-img">
+        </div>
+
+        <div class="header-text-side">
+            <h1>شبوك-مزارع-غنم-ملاعب 2026</h1>
+            <p>أرخص الأسعار • مقاولات الأحساء</p>
+        </div>
+
+        <a href="tel:0552075677" class="header-call-btn">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+    </div>
+</header>
+
+<style>
+    .branded-slim-header {
+        background: #0a1d37;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        border-bottom: 3px solid #c5a059;
+        padding: 8px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    /* تنسيق الشعار في الترويسة */
+    .site-logo-img {
+        height: 45px; /* حجم صغير ورشيق مناسب للترويسة */
+        width: auto;
+        border-radius: 8px;
+        border: 1px solid rgba(197, 160, 89, 0.5);
+    }
+
+    .header-text-side {
+        text-align: center;
+        flex-grow: 1; /* لجعل النص في المنتصف تماماً بين الشعار والزر */
+    }
+
+    .header-text-side h1 {
+        color: #fff;
+        font-size: 0.95rem;
+        margin: 0;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .header-text-side p {
+        color: #c5a059;
+        font-size: 0.65rem;
+        margin: 2px 0 0 0;
+        font-weight: bold;
+    }
+
+    .header-call-btn {
+        background: #c5a059;
+        color: #0a1d37;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 0 3px 8px rgba(197, 160, 89, 0.4);
+    }
+
+    /* تحسين العرض على الشاشات الصغيرة جداً */
+    @media (max-width: 390px) {
+        .header-text-side h1 { font-size: 0.85rem; }
+        .site-logo-img { height: 38px; }
+    }
+</style>
+<section class="fences-hero-section">
+    <div class="hero-content-box">
+        <h2 class="hero-main-title">تركيب كافة أنواع الشبوك الأصلية</h2>
+        <div class="hero-accent-line"></div>
+        <p class="hero-sub-text">شبوك مزارع - شبوك ملاعب - حماية أراضي - شبوك غنم</p>
+        
+        <div class="hero-badges">
+            <span class="badge-item"><i class="fas fa-shield-alt"></i> جودة مجلفنة</span>
+            <span class="badge-item"><i class="fas fa-tags"></i> أرخص الأسعار</span>
+        </div>
+
+        <a href="https://wa.me/966552075677" class="hero-btn-wa">
+            <i class="fab fa-whatsapp"></i> اطلب تسعيرة الآن
+        </a>
+    </div>
+</section>
+
+<style>
+    .fences-hero-section {
+        width: 100%;
+        height: 500px;
+        /* استخدام صورة الشبوك الأصلية بدون تظليل */
+        background: url('https://i.postimg.cc/W358JKjx/IMG_20251225_WA0037.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 5px solid #c5a059;
+    }
+
+    .hero-content-box {
+        text-align: center;
+        color: #fff;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    /* ظل قوي للنصوص لضمان الوضوح فوق الصورة بدون تظليل */
+    .hero-main-title {
+        font-size: 1.8rem;
+        font-weight: 900;
+        margin: 0;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .hero-accent-line {
+        width: 80px;
+        height: 4px;
+        background: #c5a059;
+        margin: 15px auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-sub-text {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+        text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-badges {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .badge-item {
+        font-size: 0.85rem;
+        font-weight: bold;
+        background: rgba(10, 29, 55, 0.8);
+        padding: 5px 12px;
+        border-radius: 5px;
+        border-right: 3px solid #c5a059;
+        text-shadow: none;
+    }
+
+    .hero-btn-wa {
+        background: #25d366;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 30px;
+        border-radius: 50px;
+        font-weight: 900;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        transition: 0.3s;
+    }
+
+    .hero-btn-wa:active {
+        transform: scale(0.95);
+    }
+
+    @media (max-width: 500px) {
+        .hero-main-title { font-size: 1.4rem; }
+        .hero-sub-text { font-size: 0.9rem; }
+    }
+</style>
+<section class="fences-grid-container">
+    <div class="f-grid">
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/W358JKjx/IMG_20251225_WA0037.jpg" alt="تركيب شبوك مزارع الأحساء">
+            <div class="f-info">
+                <p class="f-price">أرخص تركيب شبوك مزارع بالأحساء</p>
+                <div class="f-tags">#شبوك_مزارع #حي_السلمانية #تسوير_أراضي</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/qR1wCY4r/IMG_20251225_WA0036.jpg" alt="شبوك ملاعب">
+            <div class="f-info">
+                <p class="f-price">أرخص سعر متر شبوك ملاعب</p>
+                <div class="f-tags">#شبوك_ملاعب #الهفوف #تجهيز_ملاعب</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/1tvBNTsh/IMG_20251225_WA0035.jpg" alt="شبوك غنم">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك غنم وحظائر</p>
+                <div class="f-tags">#شبوك_غنم #حي_المزروع #حماية_حظائر</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/Hx6z7KHq/IMG_20251225_WA0034.jpg" alt="مقاول شبوك المبرز">
+            <div class="f-info">
+                <p class="f-price">أرخص مقاول شبوك في المبرز</p>
+                <div class="f-tags">#شبوك_المبرز #حي_النسيم #تركيب_شبوك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/bJmg2M8W/IMG_20251225_WA0033.jpg" alt="شبوك مجلفنة">
+            <div class="f-info">
+                <p class="f-price">أرخص أسعار الشبوك المجلفنة</p>
+                <div class="f-tags">#حي_النايفية #شبوك_أصلية #الأحساء</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/RFgdn844/IMG_20251225_WA0032.jpg" alt="تسوير أراضي">
+            <div class="f-info">
+                <p class="f-price">أرخص تسوير أراضي بيضاء بالهفوف</p>
+                <div class="f-tags">#حي_الجامعة #شبوك_حماية #سور_سلك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/W358JKTb/IMG_20251225_WA0031.jpg" alt="شبوك بي في سي">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك PVC ملونة</p>
+                <div class="f-tags">#حي_الروضة #شبوك_خضراء #ديكور_شبوك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/76K9Tcwr/IMG_20251225_WA0029.jpg" alt="شبوك حماية">
+            <div class="f-info">
+                <p class="f-price">أرخص حماية للمزارع والاستراحات</p>
+                <div class="f-tags">#حي_البندرية #شبوك_استراحات #مقاول_الأحساء</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/9MLbqSCX/IMG_20251225_WA0027.jpg" alt="شبوك طرق">
+            <div class="f-info">
+                <p class="f-price">أرخص توريد وتركيب شبوك طرق</p>
+                <div class="f-tags">#حي_المعلم #شبوك_حكومية #الأحساء_الآن</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg" alt="شبوك أمنية">
+            <div class="f-info">
+                <p class="f-price">أرخص أسوار أمنية وسلك شائك</p>
+                <div class="f-tags">#حي_الأندلس #سلك_شائك #حماية_أمنية</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/bvH3qr5t/5447603825691791411_121.jpg" alt="شبوك كسارات">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك كسارات ومصانع</p>
+                <div class="f-tags">#حي_الياسمين #شبوك_صناعية #مقاولات_2026</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/wBc09MrN/5447603825691791410_121.jpg" alt="شبوك حديد">
+            <div class="f-info">
+                <p class="f-price">أرخص حديد شبوك مجلفن</p>
+                <div class="f-tags">#حي_التعاون #بناء_شبوك #الشرقية</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/26kTympb/5447603825691791408_121_edit_1230810166547877.jpg" alt="تنسيق شبوك">
+            <div class="f-info">
+                <p class="f-price">أرخص تنسيق شبوك حدائق ومزارع</p>
+                <div class="f-tags">#حي_النزهة #شبوك_حدائق #تسييج</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/hGbpKvYx/5447603825691791406_121.jpg" alt="شبوك قوية">
+            <div class="f-info">
+                <p class="f-price">أرخص تنفيذ شبوك بمواصفات عالية</p>
+                <div class="f-tags">#حي_البصيرة #شبوك_سميكة #جودة_عالية</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/DzdB70N4/5447603825691791405_121.jpg" alt="مقاول شبوك الهفوف">
+            <div class="f-info">
+                <p class="f-price">أرخص مقاول شبوك بالهفوف</p>
+                <div class="f-tags">#الهفوف #حي_القدس #شبوك_مزارع</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/d1sn3vMr/5447603825691791403_121.jpg" alt="تركيب شائك">
+            <div class="f-info">
+                <p class="f-price">أرخص تركيب سلك شائك للأراضي</p>
+                <div class="f-tags">#حي_المنار #حماية_شبوك #تسوير</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/9Mm10V37/5447603825691791401_121.jpg" alt="أسعار الشبوك">
+            <div class="f-info">
+                <p class="f-price">أرخص أسعار متر الشبوك 2026</p>
+                <div class="f-tags">#حي_الشروق #متر_الشبوك #أرخص_سعر</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/0QkZjxgc/5447603825691791400_121.jpg" alt="شبوك غنم رخيصة">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك غنم في الأحساء</p>
+                <div class="f-tags">#حي_العزيزية #حظائر_غنم #شبوك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/TwdQ1G8t/5447603825691791399_121_edit_1230779228673670.jpg" alt="تجهيز شبوك">
+            <div class="f-info">
+                <p class="f-price">أرخص تجهيز شبوك مزارع كبيرة</p>
+                <div class="f-tags">#حي_الفاضلية #مزارع_النخيل #شبوك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/TwdQ1G8c/5447603825691791397_121_edit_1230730330777751.jpg" alt="تسوير ملاعب">
+            <div class="f-info">
+                <p class="f-price">أرخص تسوير ملاعب بالأحساء</p>
+                <div class="f-tags">#حي_الرياض #ملاعب_كرة #شبوك_ملاعب</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/d1sn3vMG/5447603825691791390_121.jpg" alt="شبوك مجلفنة بالكامل">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك مجلفنة ضد الصدأ</p>
+                <div class="f-tags">#حي_الزهور #شبوك_جلفانايز #الأحساء</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/85pwcD89/5447603825691791385_121.jpg" alt="مقاول شبوك معتمد">
+            <div class="f-info">
+                <p class="f-price">أرخص مقاول شبوك معتمد في الشرقية</p>
+                <div class="f-tags">#شبوك_الأحساء #مقاولات_شبوك #2026</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/sXjKxyF8/5447603825691791384_121.jpg" alt="شبوك استراحات">
+            <div class="f-info">
+                <p class="f-price">أرخص تسوير استراحات وشاليهات</p>
+                <div class="f-tags">#استراحات_الأحساء #شبوك_ديكور #حي_المنار</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/yd1nxBqf/5447603825691791383_121.jpg" alt="شبوك حماية أراضي">
+            <div class="f-info">
+                <p class="f-price">أرخص حماية أراضي زراعية</p>
+                <div class="f-tags">#حي_الشروق #شبوك_أراضي #الأحساء</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/76K9TcDQ/5447603825691791382_121.jpg" alt="بناء سور شبك">
+            <div class="f-info">
+                <p class="f-price">أرخص بناء أسوار شبك حديد</p>
+                <div class="f-tags">#حي_البندرية #سور_حديد #شبوك</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/G2Lztr0f/5447603825691791378_120.jpg" alt="شبوك مزارع غنم">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك مزارع غنم وماشية</p>
+                <div class="f-tags">#شبوك_غنم #حي_المزروع #تسوير_مزارع</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/hj2s7wgM/5447603825691791379_121.jpg" alt="تركيب شبوك المبرز">
+            <div class="f-info">
+                <p class="f-price">أرخص تركيب شبوك في مدينة المبرز</p>
+                <div class="f-tags">#المبرز #حي_النسيم #شبوك_2026</div>
+            </div>
+        </div>
+
+        <div class="f-card">
+            <img src="https://i.postimg.cc/G2XKsNrq/5447603825691791380_121.jpg" alt="شبوك ملاعب الأحساء">
+            <div class="f-info">
+                <p class="f-price">أرخص شبوك ملاعب كرة قدم</p>
+                <div class="f-tags">#ملاعب_الأحساء #حي_السلمانية #شبوك_ملاعب</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .fences-grid-container { padding: 30px 10px; background: #fff; }
+    .f-grid { display: grid; grid-template-columns: 1fr; gap: 35px; max-width: 900px; margin: 0 auto; }
+    
+    .f-card { 
+        background: #fdfdfd; 
+        border-radius: 20px; 
+        overflow: hidden; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        border: 1px solid #eee;
+    }
+
+    .f-card img { width: 100%; height: auto; display: block; border-bottom: 4px solid #0a1d37; }
+    .f-info { padding: 20px; text-align: right; }
+    .f-price { color: #27ae60; font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; }
+    .f-tags { color: #c5a059; font-size: 0.85rem; font-weight: bold; line-height: 1.6; }
+</style>
+<footer class="fences-footer">
+    <div class="f-container">
+        
+        <div class="f-brand">
+            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مقاولات الأحساء" class="f-logo-img">
+            <h3>شبوك-مزارع-غنم-ملاعب 2026</h3>
+            <p>خياركم الأفضل لتركيب كافة أنواع الشبوك الأصلية في الأحساء</p>
+        </div>
+
+        <div class="f-social">
+            <p class="social-text">:تابع أعمالنا عبر المنصات التالية</p>
+            <div class="social-icons-wrapper">
+                <a href="https://www.tiktok.com/@ahsa.shades" class="s-circle tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/al_ahsa_mizalaat" class="s-circle insta"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/solomons456" class="s-circle x-twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/share/17bH96Jg11/" class="s-circle facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/966552075677" class="s-circle whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="f-bottom-bar">
+            <div class="f-divider"></div>
+            <p class="copy-text">© 2026 جميع الحقوق محفوظة | مقاولات الأحساء</p>
+            <a href="tel:0552075677" class="f-call-number">
+                <i class="fas fa-phone-alt"></i> 0552075677
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    .fences-footer {
+        background: #0a1d37;
+        color: #fff;
+        padding: 50px 20px 100px; /* مساحة سفلية لسهولة التصفح بالجوال */
+        text-align: center;
+        border-top: 4px solid #c5a059;
+    }
+
+    .f-logo-img {
+        height: 75px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(197, 160, 89, 0.4);
+    }
+
+    .f-brand h3 {
+        color: #c5a059;
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+
+    .f-brand p {
+        color: #bbb;
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+
+    .social-text {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    /* تصميم دوائر المنصات باللون الأبيض لتبرز الشعارات الملونة */
+    .s-circle {
+        width: 46px;
+        height: 46px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* ألوان الأيقونات الأصلية */
+    .tiktok { color: #000; }
+    .insta { color: #E1306C; }
+    .x-twitter { color: #000; }
+    .facebook { color: #1877F2; }
+    .whatsapp { color: #25D366; }
+
+    .s-circle:active {
+        transform: scale(0.9);
+    }
+
+    .f-divider {
+        height: 1px;
+        background: rgba(255,255,255,0.1);
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    .copy-text {
+        font-size: 0.75rem;
+        color: #888;
+        margin-bottom: 8px;
+    }
+
+    .f-call-number {
+        color: #c5a059;
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-decoration: none;
+        display: inline-block;
+    }
+</style>
