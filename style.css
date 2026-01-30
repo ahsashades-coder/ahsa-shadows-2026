@@ -1,0 +1,935 @@
+/* ===== متغيرات الألوان ===== */
+:root {
+    --primary: #0a1d37;
+    --gold: #c5a059;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333333;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== إعادة الضبط الأساسية ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+/* ===== تحسينات الأداء ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== الشريط العلوي ===== */
+.top-bar {
+    background: var(--primary);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+    z-index: 1000;
+}
+
+.top-bar .phone {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.top-bar .phone:hover {
+    opacity: 0.9;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* ===== الهيدر الرئيسي ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    object-fit: cover;
+}
+
+.brand-text h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+.brand-text p {
+    font-size: 0.85rem;
+    margin: 0.25rem 0 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.call-btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.call-btn:hover {
+    background: var(--gold);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ===== الشريط الإخباري ===== */
+.ticker-container {
+    background: var(--light-gray);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+}
+
+.ticker-label {
+    background: var(--gold);
+    color: var(--primary);
+    padding: 0 1rem;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.ticker-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: moveTicker 60s linear infinite;
+    padding-left: 2rem;
+}
+
+.ticker-text {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.ticker-text span {
+    padding-right: 2rem;
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.gold-word { 
+    color: #b08d4a; 
+    font-weight: 700; 
+}
+
+.keyword-plus { 
+    color: #2c3e50; 
+    font-style: italic; 
+    font-weight: 600; 
+}
+
+.social-call { 
+    color: #d35400; 
+    font-weight: 700; 
+}
+
+@keyframes moveTicker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ===== السلايدر ===== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #000;
+    border-bottom: 3px solid var(--gold);
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 2rem;
+    right: 1.5rem;
+    left: 1.5rem;
+    color: var(--white);
+    background: rgba(10, 29, 55, 0.85);
+    padding: 1rem;
+    border-right: 5px solid var(--gold);
+    border-radius: 0.5rem;
+    max-width: 600px;
+}
+
+.slide-caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.slide-caption p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background: rgba(197, 160, 89, 0.7);
+    border: none;
+    color: var(--white);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slider-nav button:hover {
+    background: var(--gold);
+    transform: scale(1.1);
+}
+
+/* ===== أقسام الخدمات ===== */
+.services-app-grid {
+    padding: 2rem 1rem;
+    background: #fdfdfd;
+}
+
+.grid-header {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.grid-header h2 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 800;
+}
+
+.accent-line {
+    width: 3.5rem;
+    height: 0.25rem;
+    background: var(--gold);
+    margin-top: 0.75rem;
+    border-radius: 0.125rem;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    text-decoration: none;
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--gold);
+}
+
+.img-box {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.grid-item:hover .img-box img {
+    transform: scale(1.05);
+}
+
+.item-label {
+    padding: 1.25rem 1rem;
+    background: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+    flex-grow: 1;
+}
+
+.item-label span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+/* ===== آراء العملاء ===== */
+.customers-reviews-l {
+    padding: 3rem 1rem;
+    background: #fdfdfd;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.reviews-header h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    font-weight: 800;
+}
+
+.line-l {
+    width: 4rem;
+    height: 0.25rem;
+    background: var(--gold);
+    margin: 1rem auto;
+    border-radius: 0.25rem;
+}
+
+.reviews-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gold-quote {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.5;
+}
+
+.reviews-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 1rem 3rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--light-gray);
+    -webkit-overflow-scrolling: touch;
+}
+
+.reviews-scroller::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reviews-scroller::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.reviews-scroller::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+}
+
+.review-card-l {
+    min-width: 320px;
+    background: var(--white);
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), #1a3d6d);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 2px solid var(--gold);
+    flex-shrink: 0;
+}
+
+.user-meta h4 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.stars-l {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #ffc107;
+}
+
+.comment-text {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.review-date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* ===== الخريطة ===== */
+.compact-map-section {
+    padding: 2rem 1rem;
+    background: var(--white);
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.section-title h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.title-line {
+    width: 3rem;
+    height: 0.25rem;
+    background: var(--gold);
+    margin-top: 0.75rem;
+    border-radius: 0.125rem;
+}
+
+.map-box {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    background: #f9f9f9;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.map-action {
+    padding: 1.25rem;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+}
+
+.map-btn {
+    background: var(--primary);
+    color: var(--gold);
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 2px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+    background: var(--gold);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ===== شريط الكلمات المفتاحية ===== */
+.seo-keywords-bar {
+    background: #07162b;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gold);
+    overflow: hidden;
+}
+
+.keywords-content {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: marquee 40s linear infinite;
+    padding: 0.5rem 0;
+}
+
+.keywords-content h1 {
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin: 0;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.keywords-content span {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ===== الفوتر ===== */
+.app-footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 3rem 1.5rem 1.5rem;
+    border-top: 4px solid var(--gold);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-about {
+    text-align: center;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    object-fit: cover;
+}
+
+.footer-about p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.7;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.footer-social h3 {
+    font-size: 1.25rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer-social .social-icons {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.tiktok:hover { background: #000; }
+.instagram:hover { background: #E1306C; }
+.x-twitter:hover { background: #000; }
+.facebook:hover { background: #1877F2; }
+.whatsapp-catalog:hover { background: #25D366; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.contact-quick a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact-quick a:hover {
+    opacity: 0.9;
+}
+
+/* ===== الأزرار العائمة ===== */
+.floating-contact {
+    position: fixed;
+    bottom: 2rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.f-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.f-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.f-icon:active {
+    transform: scale(0.95);
+}
+
+.f-whatsapp { 
+    background: #25d366; 
+}
+
+.f-phone { 
+    background: var(--primary); 
+    border: 2px solid var(--gold); 
+}
+
+/* ===== التصميم المتجاوب ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .top-bar {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .top-bar .phone {
+        font-size: 0.9rem;
+    }
+    
+    .social-icons {
+        gap: 0.75rem;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .brand {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .call-btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .ticker-container {
+        height: 2.5rem;
+    }
+    
+    .ticker-label {
+        font-size: 0.8rem;
+        padding: 0 0.75rem;
+    }
+    
+    .ticker-text span {
+        font-size: 0.8rem;
+        padding-right: 1.5rem;
+    }
+    
+    .slider-container {
+        height: 300px;
+    }
+    
+    .slide-caption {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        padding: 0.75rem;
+    }
+    
+    .slide-caption h3 {
+        font-size: 1.2rem;
+    }
+    
+    .slide-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .slider-nav button {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .grid-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .app-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+    
+    .img-box {
+        height: 150px;
+    }
+    
+    .item-label span {
+        font-size: 1rem;
+    }
+    
+    .reviews-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .review-card-l {
+        min-width: 280px;
+        padding: 1.5rem;
+    }
+    
+    .floating-contact {
+        left: 1rem;
+        bottom: 1.5rem;
+    }
+    
+    .f-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ticker-wrapper {
+        animation-duration: 40s;
+    }
+    
+    .slider-container {
+        height: 250px;
+    }
+    
+    .slide-caption h3 {
+        font-size: 1.1rem;
+    }
+    
+    .slide-caption p {
+        font-size: 0.85rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .keywords-content {
+        animation-duration: 30s;
+    }
+}
+
+/* ===== تحسينات الوصول ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .ticker-wrapper,
+    .keywords-content {
+        animation: none;
+    }
+}
+
+/* ===== تحسينات الطباعة ===== */
+@media print {
+    .top-bar,
+    .floating-contact,
+    .slider-nav,
+    .map-action,
+    .social-icons {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    .call-btn {
+        border: 1px solid #000;
+        color: #000;
+        background: none;
+    }
+      }
