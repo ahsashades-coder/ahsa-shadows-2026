@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /cgi-bin/
+Disallow: *.pdf$
+Disallow: *.jpg$
+Allow: /*.jpg$ // ولكن فقط الصور المهمة
+Crawl-delay: 1
+
+# رابط السايت ماب
+Sitemap: https://ahsashades-coder.github.io/sitemap.xml
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /images/projects/
+Disallow: /images/temp/
+
+# المحفوظات المؤقتة
+User-agent: ia_archiver
+Disallow: /
+
+# الروبوتات السيئة
+User-agent: BadBot
+Disallow: /
+
+User-agent: MJ12bot
+Crawl-delay: 5
