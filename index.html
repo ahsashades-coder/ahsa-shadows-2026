@@ -6,8 +6,8 @@
     
     <!-- ========== TITLE & BASIC SEO ========== -->
     <title>مظلات وسواتر الهفوف الأحساء 2026 | أفضل حداد في المنطقة الشرقية</title>
-    <meta name="description" content="مظلات وسواتر الهفوف الأحساء 2026 - تركيب مظلات سيارات، هناجر، برجولات، سواتر، قرميد، ديكورات، تنسيق حدائق، شبوك مزارع، شبابيك ألمنيوم في الأحساء والمنطقة الشرقية">
-    <meta name="keywords" content="مظلات الهفوف, سواتر الأحساء, حداد الأحساء, هناجر, برجولات, قرميد, بيوت شعر, تنسيق حدائق, شبابيك ألمنيوم, شبوك مزارع, مظلات سيارات, هناجر ومستودعات, الهفوف, الأحساء">
+    <meta name="description" content="مظلات وسواتر الهفوف الأحساء 2026 - تركيب مظلات سيارات، هناجر، برجولات، سواتر، قرميد، ديكورات، تنسيق حدائق، شبابيك ألمنيوم في الأحساء والمنطقة الشرقية">
+    <meta name="keywords" content="مظلات الهفوف, سواتر الأحساء, حداد الأحساء, هناجر, برجولات, قرميد, بيوت شعر, تنسيق حدائق, شبابيك ألمنيوم, مظلات سيارات, هناجر ومستودعات, الهفوف, الأحساء">
     <meta name="author" content="مظلات وسواتر الهفوف">
     <meta name="robots" content="index, follow">
     
@@ -129,7 +129,42 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
 
-        /* 3. الشريط الإخباري المتحرك */
+        /* 3. شريط الكلمات المفتاحية العلوي */
+        .top-keywords-bar {
+            background: linear-gradient(90deg, #0a1d37, #1a3d6d);
+            padding: 10px 5px;
+            overflow: hidden;
+            border-bottom: 1px solid #c5a059;
+            direction: ltr; /* لعكس اتجاه الحركة */
+        }
+
+        .keywords-marquee {
+            white-space: nowrap;
+            display: inline-block;
+            animation: keywordsScroll 40s linear infinite;
+        }
+
+        .keyword-item {
+            display: inline-block;
+            color: #c5a059;
+            font-size: 11px;
+            margin: 0 20px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .keyword-item:before {
+            content: "•";
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        @keyframes keywordsScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 4. الشريط الإخباري المتحرك */
         .ticker-container {
             background: var(--light-gray);
             height: 48px;
@@ -180,7 +215,7 @@
             100% { transform: translateX(100%); }
         }
 
-        /* أزرار عائمة */
+        /* 5. أزرار عائمة */
         .floating-contact {
             position: fixed;
             bottom: 25px;
@@ -208,7 +243,7 @@
         .f-whatsapp { background: #25d366; }
         .f-phone { background: var(--primary); border: 2px solid var(--gold); }
         
-        /* تنسيقات السلايدر */
+        /* 6. تنسيقات السلايدر */
         .slider-container {
             position: relative;
             width: 100%;
@@ -287,7 +322,7 @@
             justify-content: center;
         }
         
-        /* التنسيقات العامة للشبكة */
+        /* 7. التنسيقات العامة للشبكة */
         .services-app-grid {
             padding: 20px 12px;
             background: #fdfdfd;
@@ -364,8 +399,56 @@
             transform: scale(0.96);
             background: #f9f9f9;
         }
+
+        /* 8. شريط الكلمات المفتاحية بعد الأقسام */
+        .keywords-after-sections {
+            background: #f8f9fa;
+            padding: 25px 15px;
+            border-top: 2px solid #c5a059;
+            border-bottom: 2px solid #c5a059;
+            margin: 20px 0;
+        }
+
+        .keywords-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .keywords-title {
+            text-align: center;
+            color: #0a1d37;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .keywords-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .keyword-tag {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #0a1d37;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .keyword-tag:hover {
+            background: #c5a059;
+            color: white;
+            border-color: #c5a059;
+            transform: translateY(-2px);
+        }
         
-        /* آراء العملاء */
+        /* 9. آراء العملاء */
         .customers-reviews-l { padding: 40px 15px; background: #fdfdfd; }
         .reviews-header { text-align: center; margin-bottom: 25px; }
         .reviews-header h2 { color: #0a1d37; font-size: 1.4rem; margin: 0; font-weight: 800; }
@@ -417,7 +500,7 @@
             flex-grow: 1;
         }
         
-        /* الخريطة */
+        /* 10. الخريطة */
         .compact-map-section {
             padding: 20px 15px;
             background: #fff;
@@ -478,7 +561,7 @@
             color: #fff;
         }
         
-        /* SEO Keywords */
+        /* 11. SEO Keywords السفلية */
         .seo-keywords-bar {
             background: #07162b;
             padding: 5px 10px;
@@ -518,7 +601,7 @@
             100% { transform: translateX(-100%); }
         }
         
-        /* الفوتر */
+        /* 12. الفوتر */
         .app-footer {
             background: #0a1d37;
             color: #fff;
@@ -641,6 +724,63 @@
         </div>
     </div>
 
+    <!-- ========== شريط الكلمات المفتاحية العلوي ========== -->
+    <div class="top-keywords-bar">
+        <div class="keywords-marquee">
+            <span class="keyword-item">مظلات الهفوف</span>
+            <span class="keyword-item">سواتر الأحساء</span>
+            <span class="keyword-item">حداد الأحساء</span>
+            <span class="keyword-item">هناجر ومستودعات</span>
+            <span class="keyword-item">برجولات خشبية</span>
+            <span class="keyword-item">قرميد معدني</span>
+            <span class="keyword-item">بيوت شعر ملكية</span>
+            <span class="keyword-item">تنسيق حدائق</span>
+            <span class="keyword-item">عشب صناعي</span>
+            <span class="keyword-item">سواتر حديدية</span>
+            <span class="keyword-item">مظلات سيارات</span>
+            <span class="keyword-item">هناجر المنطقة الشرقية</span>
+            <span class="keyword-item">حداد فني</span>
+            <span class="keyword-item">ديكورات خارجية</span>
+            <span class="keyword-item">بديل الخشب</span>
+            <span class="keyword-item">شبابيك ألمنيوم</span>
+            <span class="keyword-item">تركيب مظلات</span>
+            <span class="keyword-item">سواتر بلاستيك</span>
+            <span class="keyword-item">هناجر شينكو</span>
+            <span class="keyword-item">قرميد إسباني</span>
+            <span class="keyword-item">خيام مناسبات</span>
+            <span class="keyword-item">بيوت شعر تراثية</span>
+            <span class="keyword-item">جلسات خارجية</span>
+            <span class="keyword-item">مظلات هرمية</span>
+            <span class="keyword-item">سواتر قماش</span>
+            <span class="keyword-item">هناجر زراعية</span>
+            <span class="keyword-item">برجولات حديد</span>
+            <span class="keyword-item">قرميد إيطالي</span>
+            <span class="keyword-item">خيام سيارات</span>
+            <span class="keyword-item">بيوت شعر حديثة</span>
+            <span class="keyword-item">حدائق منزلية</span>
+            <span class="keyword-item">عشب طبيعي</span>
+            <span class="keyword-item">سواتر معدنية</span>
+            <span class="keyword-item">مظلات مواقف</span>
+            <span class="keyword-item">هناجر صناعية</span>
+            <span class="keyword-item">برجولات حدائق</span>
+            <span class="keyword-item">واجهات قرميد</span>
+            <span class="keyword-item">خيام تخييم</span>
+            <span class="keyword-item">بيوت شعر أفراح</span>
+            <span class="keyword-item">تنسيق نباتي</span>
+            <span class="keyword-item">ديكورات حجرية</span>
+            <span class="keyword-item">شبابيك مقاومة</span>
+            <span class="keyword-item">تركيب سواتر</span>
+            <span class="keyword-item">هناجر تجارية</span>
+            <span class="keyword-item">مظلات قماشية</span>
+            <span class="keyword-item">سواتر خشبية</span>
+            <span class="keyword-item">قرميد فخاري</span>
+            <span class="keyword-item">بيوت شعر فخمة</span>
+            <span class="keyword-item">حدائق عمودية</span>
+            <span class="keyword-item">عشب صناعي حدائق</span>
+            <span class="keyword-item">سواتر خصوصية</span>
+        </div>
+    </div>
+
     <header>
         <div class="brand">
             <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="logo-img">
@@ -658,7 +798,7 @@
             <div class="ticker-text">
                 <span>مرحباً بكم في مظلات وسواتر الهفوف الأحساء</span> • 
                 <span>نقدم لكم مجموعة متنوعة من الخدمات الاحترافية في الأحساء والشرقية</span> • 
-                <span class="gold-word">مظلات سيارات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام، مستودعات، بديل الخشب، ديكورات، قرميد، شبوك مزارع، شبابيك</span> • 
+                <span class="gold-word">مظلات سيارات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام، مستودعات، بديل الخشب، ديكورات، قرميد، شبابيك ألمنيوم</span> • 
                 <span class="keyword-plus">أفضل حداد في الأحساء بأسعار 2026 • تركيب مظلات هرمية ومخروطية • متخصصون في القرميد الإسباني والإيطالي • أرقى تصاميم البرجولات الخشبية والحديدية • تركيب سواتر الحماية والخصوصية • صيانة دورية وضمان 10 سنوات • أفضل خامات الـ PVC والبوثلين</span> • 
                 <span class="social-call">تابعوا حساباتنا الرسمية على: (واتساب، انستجرام، فيس بوك، تويتر، تيك توك)</span> • 
                 <span>نشكركم لزيارة موقعنا الإلكتروني - نتمنى أن تعجبكم أعمالنا</span> • 
@@ -748,14 +888,6 @@
             </div>
 
             <div class="slide">
-                <img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg" alt="شبوك">
-                <div class="slide-caption">
-                    <h3>شبوك مزارع وحماية</h3>
-                    <p>تركيب كافة أنواع الشبوك بجودة عالية</p>
-                </div>
-            </div>
-
-            <div class="slide">
                 <img src="https://i.postimg.cc/DZqKhYVz/IMG_20260128_WA0035.jpg" alt="شبابيك">
                 <div class="slide-caption">
                     <h3>شبابيك ألمنيوم</h3>
@@ -840,13 +972,69 @@
                 </div>
                 <div class="item-label"><span>شبابيك ألمنيوم</span></div>
             </a>
+        </div>
+    </section>
 
-            <a href="fences.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg" alt="شبوك">
-                </div>
-                <div class="item-label"><span>شبوك مزارع</span></div>
-            </a>
+    <!-- ========== شريط الكلمات المفتاحية بعد الأقسام ========== -->
+    <section class="keywords-after-sections">
+        <div class="keywords-container">
+            <h3 class="keywords-title">خدماتنا المتخصصة في الأحساء والمنطقة الشرقية</h3>
+            <div class="keywords-cloud">
+                <a href="hangars.html" class="keyword-tag">هناجر الأحساء</a>
+                <a href="shades.html" class="keyword-tag">مظلات الهفوف</a>
+                <a href="tents.html" class="keyword-tag">خيام المنطقة الشرقية</a>
+                <a href="screens.html" class="keyword-tag">سواتر حديدية</a>
+                <a href="pergolas.html" class="keyword-tag">برجولات خشبية</a>
+                <a href="tiles.html" class="keyword-tag">قرميد فاخر</a>
+                <a href="decor.html" class="keyword-tag">ديكورات خارجية</a>
+                <a href="gardens.html" class="keyword-tag">تنسيق حدائق</a>
+                <a href="windows.html" class="keyword-tag">شبابيك ألمنيوم</a>
+                <a href="hangars.html" class="keyword-tag">مستودعات صناعية</a>
+                <a href="shades.html" class="keyword-tag">مظلات سيارات</a>
+                <a href="tents.html" class="keyword-tag">بيوت شعر ملكية</a>
+                <a href="screens.html" class="keyword-tag">سواتر بلاستيك</a>
+                <a href="pergolas.html" class="keyword-tag">برجولات حديد</a>
+                <a href="tiles.html" class="keyword-tag">قرميد إسباني</a>
+                <a href="decor.html" class="keyword-tag">بديل الخشب</a>
+                <a href="gardens.html" class="keyword-tag">عشب صناعي</a>
+                <a href="windows.html" class="keyword-tag">شبابيك مقاومة</a>
+                <a href="hangars.html" class="keyword-tag">هناجر زراعية</a>
+                <a href="shades.html" class="keyword-tag">مظلات هرمية</a>
+                <a href="tents.html" class="keyword-tag">خيام تخييم</a>
+                <a href="screens.html" class="keyword-tag">سواتر خصوصية</a>
+                <a href="pergolas.html" class="keyword-tag">جلسات خارجية</a>
+                <a href="tiles.html" class="keyword-tag">واجهات قرميد</a>
+                <a href="decor.html" class="keyword-tag">ديكورات حجرية</a>
+                <a href="gardens.html" class="keyword-tag">حدائق منزلية</a>
+                <a href="windows.html" class="keyword-tag">شبابيك حديثة</a>
+                <a href="hangars.html" class="keyword-tag">هناجر شينكو</a>
+                <a href="shades.html" class="keyword-tag">مظلات قماشية</a>
+                <a href="tents.html" class="keyword-tag">بيوت شعر أفراح</a>
+                <a href="screens.html" class="keyword-tag">سواتر خشبية</a>
+                <a href="pergolas.html" class="keyword-tag">برجولات حدائق</a>
+                <a href="tiles.html" class="keyword-tag">قرميد إيطالي</a>
+                <a href="decor.html" class="keyword-tag">تشطيب واجهات</a>
+                <a href="gardens.html" class="keyword-tag">عشب طبيعي</a>
+                <a href="windows.html" class="keyword-tag">شبابيك عازلة</a>
+                <a href="hangars.html" class="keyword-tag">مستودعات تجارية</a>
+                <a href="shades.html" class="keyword-tag">مظلات مواقف</a>
+                <a href="tents.html" class="keyword-tag">خيام سيارات</a>
+                <a href="screens.html" class="keyword-tag">سواتر معدنية</a>
+                <a href="pergolas.html" class="keyword-tag">برجولات فخمة</a>
+                <a href="tiles.html" class="keyword-tag">قرميد فخاري</a>
+                <a href="decor.html" class="keyword-tag">ديكورات واجهات</a>
+                <a href="gardens.html" class="keyword-tag">حدائق عمودية</a>
+                <a href="windows.html" class="keyword-tag">شبابيك PVC</a>
+                <a href="hangars.html" class="keyword-tag">هناجر كبيرة</a>
+                <a href="shades.html" class="keyword-tag">مظلات مخروطية</a>
+                <a href="tents.html" class="keyword-tag">خيام مناسبات</a>
+                <a href="screens.html" class="keyword-tag">سواتر قماش</a>
+                <a href="pergolas.html" class="keyword-tag">برجولات مظللة</a>
+                <a href="tiles.html" class="keyword-tag">قرميد سقوف</a>
+                <a href="decor.html" class="keyword-tag">ديكورات سيراميك</a>
+                <a href="gardens.html" class="keyword-tag">نوافير حدائق</a>
+                <a href="windows.html" class="keyword-tag">شبابيك ألمنيوم حديثة</a>
+            </div>
         </div>
     </section>
 
@@ -959,18 +1147,6 @@
 
             <div class="review-card-l">
                 <div class="card-top">
-                    <div class="user-avatar">ط</div>
-                    <div class="user-meta">
-                        <h4>طلال العنزي</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"شبوك المزارع قوية ومشدودة بشكل ممتاز، السعر كان الأفضل بين كل المنافسين."</p>
-                <span class="review-date">منذ شهرين</span>
-            </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
                     <div class="user-avatar">م</div>
                     <div class="user-meta">
                         <h4>محمد المطيري</h4>
@@ -1038,7 +1214,7 @@
     <div class="seo-keywords-bar">
         <div class="keywords-content">
             <h1>مظلات وسواتر الهفوف الأحساء</h1> 
-            <span>• حداد مظلات الأحساء • تركيب سواتر الهفوف • هناجر ومستودعات المنطقة الشرقية • قرميد معدني • بيوت شعر ملكية • تنسيق حدائق بالأحساء • شبوك مزارع • ديكورات بديل الخشب • شبابيك ألمنيوم • تركيب برجولات جلسات • أفضل ورشة حدادة في الهفوف • مظلات سيارات حديثة 2026</span>
+            <span>• حداد مظلات الأحساء • تركيب سواتر الهفوف • هناجر ومستودعات المنطقة الشرقية • قرميد معدني • بيوت شعر ملكية • تنسيق حدائق بالأحساء • ديكورات بديل الخشب • شبابيك ألمنيوم • تركيب برجولات جلسات • أفضل ورشة حدادة في الهفوف • مظلات سيارات حديثة 2026</span>
         </div>
     </div>
 
@@ -1108,4 +1284,4 @@
     </script>
     
 </body>
-                    </html>
+</html>
