@@ -33,6 +33,17 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    loading: lazy;
+}
+
+/* ===== تحسينات تحميل الصور ===== */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
 }
 
 /* ===== الشريط العلوي ===== */
@@ -140,6 +151,11 @@ header {
     background: var(--gold);
     color: var(--primary);
     transform: translateY(-2px);
+}
+
+.call-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
 }
 
 /* ===== الشريط الإخباري ===== */
@@ -343,6 +359,16 @@ header {
     transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border-color: var(--gold);
+}
+
+.grid-item:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.grid-item:active {
+    transform: scale(0.98);
+    background: #fafafa;
 }
 
 .img-box {
@@ -810,6 +836,7 @@ header {
         right: 1rem;
         left: 1rem;
         padding: 0.75rem;
+        background: linear-gradient(to top, rgba(10,29,55,0.95), rgba(10,29,55,0.8));
     }
     
     .slide-caption h3 {
@@ -833,6 +860,10 @@ header {
     .app-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 1rem;
+    }
+    
+    .grid-item {
+        box-shadow: 0 2px 8px var(--shadow);
     }
     
     .img-box {
@@ -932,4 +963,4 @@ header {
         color: #000;
         background: none;
     }
-      }
+}
