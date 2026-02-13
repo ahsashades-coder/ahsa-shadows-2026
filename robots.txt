@@ -4,26 +4,29 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /test/
 Disallow: /cgi-bin/
-Disallow: *.pdf$
-Disallow: *.jpg$
-Allow: /*.jpg$ // ولكن فقط الصور المهمة
+
+# الصور مسموح بها بالكامل
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+
 Crawl-delay: 1
 
-# رابط السايت ماب
-Sitemap: https://ahsashades-coder.github.io/sitemap.xml
+# رابط خريطة الموقع (مصحح)
+Sitemap: https://ahsashades-coder.github.io/ahsa-shadows-2026/sitemap.xml
 
-# Google Images
+# Google Images - مسموح بالصور
 User-agent: Googlebot-Image
-Allow: /images/projects/
-Disallow: /images/temp/
+Allow: /
 
-# المحفوظات المؤقتة
+# أرشفة الويب - مسموح بها
 User-agent: ia_archiver
-Disallow: /
+Allow: /
 
-# الروبوتات السيئة
+# حظر الروبوتات السيئة فقط
 User-agent: BadBot
 Disallow: /
 
 User-agent: MJ12bot
-Crawl-delay: 5
+Crawl-delay: 2
