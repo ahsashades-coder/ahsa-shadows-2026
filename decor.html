@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ديكورات وبديل خشب 2026 | مظلات وسواتر الهفوف</title>
+    <!-- وصف الميتا المحسن -->
+    <meta name="description" content="ديكورات وبدائل خشب حديثة للأماكن الداخلية والخارجية في الأحساء. مقاومة للرطوبة والحرارة، تناسب المناخ السعودي. اتصل الآن 0552075677">
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -24,6 +28,12 @@
             background-color: var(--light-bg);
             color: #333;
             line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* ========== HEADER & NAV ========== */
@@ -54,13 +64,18 @@
             color: var(--gold);
         }
 
+        /* تعديل الهيدر: شفاف، غير مثبت، مع تأثير ضبابي */
         header {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            width: 100%;
             z-index: 1000;
+            /* إزالة sticky */
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .brand {
@@ -88,6 +103,39 @@
             color: var(--gold);
             font-weight: bold;
             margin: 2px 0 0;
+        }
+
+        /* قائمة التنقل الجديدة */
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .main-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 20px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.3); /* خلفية خفيفة للروابط */
+        }
+        .main-nav a:hover, .main-nav a.active {
+            background: var(--gold);
+            color: white;
+        }
+        @media (min-width: 768px) {
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .main-nav {
+                margin-top: 0;
+            }
         }
 
         /* ========== HERO SECTION ========== */
@@ -153,6 +201,26 @@
         .btn-secondary:hover {
             background: var(--gold);
             color: var(--primary);
+        }
+
+        /* ========== ABOUT TEXT SECTION ========== */
+        .about-text {
+            background: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .about-text h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .about-text p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.9;
+            font-size: 1.1rem;
         }
 
         /* ========== GALLERY SECTION ========== */
@@ -409,15 +477,27 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header مع قائمة تنقل كاملة (شفاف وغير مثبت) -->
     <header>
         <div class="brand">
-            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="Logo" class="logo-img">
+            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="logo-img">
             <div class="brand-text">
                 <h1>ديكورات وبديل خشب 2026</h1>
                 <p>مظلات وسواتر الهفوف - الأحساء</p>
             </div>
         </div>
+        <nav class="main-nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="hangars.html">هناجر</a>
+            <a href="shades.html">مظلات</a>
+            <a href="tents.html">خيام</a>
+            <a href="screens.html">سواتر</a>
+            <a href="pergolas.html">برجولات</a>
+            <a href="tiles.html">مشايات</a>
+            <a href="decor.html" class="active">ديكورات</a>
+            <a href="gardens.html">حدائق</a>
+            <a href="windows.html">شيش</a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -434,6 +514,14 @@
         </div>
     </section>
 
+    <!-- قسم النص التحسيني (محتوى موسع) -->
+    <section class="about-text fade-in">
+        <div class="container">
+            <h3>لماذا تختار ديكورات وبدائل الخشب من مظلات وسواتر الهفوف؟</h3>
+            <p>نحن متخصصون في توفير أحدث حلول الديكورات الداخلية والخارجية باستخدام ألواح بديل الخشب العالية الجودة. تتميز منتجاتنا بمقاومتها للعوامل الجوية القاسية في المنطقة الشرقية، بما في ذلك الرطوبة العالية والحرارة الشديدة، مع الحفاظ على المظهر الخشبي الطبيعي الأنيق. نوفر تصاميم عصرية تناسب المجالس، المطابخ، الحمامات، الواجهات، والأسوار. فريقنا متواجد في الأحساء ويقدم خدمة المعاينة المجانية والتركيب الاحترافي. سواء كنت تبحث عن تجديد ديكور منزلك أو تنفيذ مشاريع تجارية، فنحن هنا لتحويل أفكارك إلى واقع بجودة تضمن الرضا التام.</p>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section class="gallery-section">
         <div class="section-title">
@@ -442,9 +530,9 @@
         </div>
         
         <div class="gallery-grid">
-            <!-- Gallery Item 1 -->
+            <!-- Gallery Item 1 (نصوص Alt محسنة) -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524-119.jpg" alt="ديكورات بديل خشب فاخرة">
+                <img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524-119.jpg" alt="ديكورات بديل خشب للجدران بتصميم كلاسيكي فاخر - مظلات وسواتر الهفوف">
                 <div class="gallery-caption">
                     <h4>ديكورات بديل خشب فاخرة</h4>
                     <p>تصاميم عصرية تجمع بين جمال الخشب وقوة المواد الحديثة المقاومة للماء والحرارة</p>
@@ -453,7 +541,7 @@
             
             <!-- Gallery Item 2 -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/Cx9WRRJD/5447603825691791437-120.jpg" alt="أسقف ديكورية">
+                <img src="https://i.postimg.cc/Cx9WRRJD/5447603825691791437-120.jpg" alt="أسقف ديكورية من بديل الخشب بتصميم عصري للمجالس - الأحساء">
                 <div class="gallery-caption">
                     <h4>أسقف ديكورية متميزة</h4>
                     <p>تصميمات مبتكرة للأسقب تضيف لمسة جمالية وفخامة لجميع أرجاء المنزل</p>
@@ -462,7 +550,7 @@
             
             <!-- Gallery Item 3 -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/7Z5FP31P/5447603825691791450-121.jpg" alt="ديكورات خارجية">
+                <img src="https://i.postimg.cc/7Z5FP31P/5447603825691791450-121.jpg" alt="ديكورات خارجية مقاومة للحرارة والرطوبة من بديل الخشب - مظلات وسواتر الهفوف">
                 <div class="gallery-caption">
                     <h4>ديكورات خارجية مقاومة</h4>
                     <p>مواد عالية الجودة مقاومة لأشعة الشمس والأمطار والرطوبة تناسب المناخ السعودي</p>
@@ -471,7 +559,7 @@
             
             <!-- Gallery Item 4 -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/KvpXyqTF/5447603825691791452-121.jpg" alt="ألواح ديكورية">
+                <img src="https://i.postimg.cc/KvpXyqTF/5447603825691791452-121.jpg" alt="ألواح ديكورية ثلاثية الأبعاد بديل الخشب للجدران - تنفيذ الهفوف">
                 <div class="gallery-caption">
                     <h4>ألواح ديكورية ثلاثية الأبعاد</h4>
                     <p>تصميمات مبتكرة تضيف عمقًا وجمالاً للجدران الداخلية والخارجية</p>
@@ -480,7 +568,7 @@
             
             <!-- Gallery Item 5 -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/7Zjp55XV/5447603825691791426-119.jpg" alt="ديكورات مطابخ">
+                <img src="https://i.postimg.cc/7Zjp55XV/5447603825691791426-119.jpg" alt="ديكورات مطابخ وحمامات بديل الخشب المقاوم للماء - مظلات وسواتر الهفوف">
                 <div class="gallery-caption">
                     <h4>ديكورات مطابخ و حمامات</h4>
                     <p>حلول عملية وجميلة للمساحات الرطبة مع الحفاظ على المظهر الخشبي الأنيق</p>
@@ -489,7 +577,7 @@
             
             <!-- Gallery Item 6 -->
             <div class="gallery-item fade-in">
-                <img src="https://i.postimg.cc/65bsNjZJ/5447603825691791453-119.jpg" alt="جدران ديكورية">
+                <img src="https://i.postimg.cc/65bsNjZJ/5447603825691791453-119.jpg" alt="جدران ديكورية بديل الخشب بتصميم أنيق للمنازل - الأحساء">
                 <div class="gallery-caption">
                     <h4>جدران ديكورية متميزة</h4>
                     <p>تغطيات جدران تضيف دفئًا وأناقة للمساحات الداخلية والخارجية</p>
@@ -586,15 +674,16 @@
     <footer>
         <div class="footer-content">
             <div>
-                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="Logo" class="footer-logo">
+                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="footer-logo">
                 <p>متخصصون في ديكورات وبدائل الخشب الحديثة منذ سنوات</p>
             </div>
             
             <div>
                 <h4>روابط سريعة</h4>
                 <p><a href="index.html" style="color: var(--gold);">الرئيسية</a></p>
-                <p><a href="decor.html" style="color: var(--gold);">ديكورات وبديل خشب</a></p>
                 <p><a href="shades.html" style="color: var(--gold);">مظلات</a></p>
+                <p><a href="decor.html" style="color: var(--gold);">ديكورات وبديل خشب</a></p>
+                <p><a href="hangars.html" style="color: var(--gold);">هناجر</a></p>
             </div>
             
             <div>
