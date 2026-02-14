@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- ========== TITLE & BASIC SEO ========== -->
     <title>مظلات وسواتر الهفوف الأحساء 2026 | أفضل حداد في المنطقة الشرقية</title>
@@ -11,7 +11,7 @@
     <meta name="author" content="مظلات وسواتر الهفوف">
     <meta name="robots" content="index, follow">
     
-    <!-- ========== FAVICON FIX ========== -->
+    <!-- ========== FAVICON ========== -->
     <link rel="icon" href="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" type="image/jpeg">
     <link rel="apple-touch-icon" href="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg">
     <link rel="shortcut icon" href="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg">
@@ -46,15 +46,20 @@
             --light-gray: #d1d1d1;
         }
 
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: #fff;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* 1. الشريط العلوي */
+        /* ===== الشريط العلوي ===== */
         .top-bar {
             background: var(--primary);
             padding: 8px 15px;
@@ -75,9 +80,11 @@
             color: var(--white);
             margin-right: 12px;
             font-size: 16px;
+            transition: color 0.3s;
         }
+        .social-icons a:hover { color: var(--gold); }
 
-        /* 2. الهيدر (الترويسة) */
+        /* ===== الهيدر الرئيسي ===== */
         header {
             display: flex;
             justify-content: space-between;
@@ -127,25 +134,25 @@
             font-size: 13px;
             border: 1px solid var(--gold);
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
+        .call-btn:hover { background: #1a2f4e; }
 
-        /* 3. شريط الكلمات المفتاحية العلوي */
+        /* ===== شريط الكلمات المفتاحية العلوي ===== */
         .top-keywords-bar {
             background: linear-gradient(90deg, #0a1d37, #1a3d6d);
             padding: 10px 5px;
             overflow: hidden;
             border-bottom: 1px solid #c5a059;
-            direction: ltr; /* لعكس اتجاه الحركة */
         }
 
         .keywords-marquee {
+            display: flex;
             white-space: nowrap;
-            display: inline-block;
-            animation: keywordsScroll 40s linear infinite;
+            animation: scrollKeywords 40s linear infinite;
         }
 
         .keyword-item {
-            display: inline-block;
             color: #c5a059;
             font-size: 11px;
             margin: 0 20px;
@@ -153,18 +160,19 @@
             text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
 
-        .keyword-item:before {
+        .keyword-item::before {
             content: "•";
             color: #fff;
-            margin-right: 10px;
+            margin-left: 8px;
+            margin-right: 8px;
         }
 
-        @keyframes keywordsScroll {
+        @keyframes scrollKeywords {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
 
-        /* 4. الشريط الإخباري المتحرك */
+        /* ===== شريط التحديث (ticker) ===== */
         .ticker-container {
             background: var(--light-gray);
             height: 48px;
@@ -172,7 +180,6 @@
             align-items: center;
             overflow: hidden;
             border-bottom: 2px solid var(--gold);
-            position: relative;
         }
 
         .ticker-label {
@@ -183,20 +190,21 @@
             height: 100%;
             display: flex;
             align-items: center;
-            z-index: 10;
             font-size: 14px;
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
         }
 
         .ticker-wrapper {
             display: flex;
             white-space: nowrap;
-            animation: moveTicker 80s linear infinite;
+            animation: scrollTicker 40s linear infinite;
         }
 
         .ticker-text {
             display: flex;
             align-items: center;
+            padding-right: 30px;
         }
 
         .ticker-text span {
@@ -210,12 +218,129 @@
         .keyword-plus { color: #2c3e50; font-style: italic; font-weight: 600; }
         .social-call { color: #d35400; font-weight: bold; }
 
-        @keyframes moveTicker {
+        @keyframes scrollTicker {
             0% { transform: translateX(0); }
-            100% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
-        /* 5. أزرار عائمة */
+        /* ===== القسم الرئيسي الجديد (بدلاً من السلايدر) ===== */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            background-image: url('https://i.postimg.cc/90Ctq34h/LORP4500-edit-384436840148504.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        /* طبقة تظليل داكنة لتحسين قراءة النص */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 900px;
+            padding: 30px 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--gold);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .hero-feature {
+            background: rgba(197, 160, 89, 0.2);
+            border: 1px solid var(--gold);
+            border-radius: 40px;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-feature i {
+            color: var(--gold);
+            margin-left: 8px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .hero-btn {
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-btn-primary {
+            background: var(--gold);
+            color: var(--primary);
+        }
+        .hero-btn-primary:hover { background: #b38f4d; }
+
+        .hero-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--gold);
+        }
+        .hero-btn-secondary:hover { background: rgba(197, 160, 89, 0.2); }
+
+        @media (max-width: 600px) {
+            .hero-section { min-height: 450px; }
+            .hero-content h2 { font-size: 1.6rem; }
+            .hero-content p { font-size: 1rem; }
+            .hero-feature { font-size: 0.85rem; padding: 6px 15px; }
+            .hero-btn { padding: 12px 25px; font-size: 0.9rem; }
+        }
+
+        /* ===== أزرار عائمة ===== */
         .floating-contact {
             position: fixed;
             bottom: 25px;
@@ -242,87 +367,8 @@
         .f-icon:active { transform: scale(0.9); }
         .f-whatsapp { background: #25d366; }
         .f-phone { background: var(--primary); border: 2px solid var(--gold); }
-        
-        /* 6. تنسيقات السلايدر */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            overflow: hidden;
-            background-color: #000;
-            border-bottom: 3px solid #c5a059;
-        }
 
-        .slides {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.7);
-        }
-
-        .slide-caption {
-            position: absolute;
-            bottom: 30px;
-            right: 20px;
-            left: 20px;
-            color: white;
-            background: rgba(10, 29, 55, 0.8);
-            padding: 15px;
-            border-right: 5px solid #c5a059;
-            border-radius: 5px;
-            max-width: 80%;
-        }
-
-        .slide-caption h3 {
-            margin: 0;
-            font-size: 1.3rem;
-            color: #c5a059;
-        }
-
-        .slide-caption p {
-            margin: 5px 0 0;
-            font-size: 0.95rem;
-        }
-
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 15px;
-            transform: translateY(-50%);
-            box-sizing: border-box;
-        }
-
-        .slider-nav button {
-            background: rgba(197, 160, 89, 0.6);
-            border: none;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* 7. التنسيقات العامة للشبكة */
+        /* ===== شبكة الخدمات ===== */
         .services-app-grid {
             padding: 20px 12px;
             background: #fdfdfd;
@@ -382,10 +428,10 @@
             padding: 10px 5px;
             background: #fff;
             text-align: center;
+            min-height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 45px;
         }
 
         .item-label span {
@@ -395,12 +441,9 @@
             line-height: 1.2;
         }
 
-        .grid-item:active {
-            transform: scale(0.96);
-            background: #f9f9f9;
-        }
+        .grid-item:active { transform: scale(0.96); background: #f9f9f9; }
 
-        /* 8. شريط الكلمات المفتاحية بعد الأقسام */
+        /* ===== قسم الكلمات المفتاحية ===== */
         .keywords-after-sections {
             background: #f8f9fa;
             padding: 25px 15px;
@@ -447,15 +490,40 @@
             border-color: #c5a059;
             transform: translateY(-2px);
         }
-        
-        /* 9. آراء العملاء */
-        .customers-reviews-l { padding: 40px 15px; background: #fdfdfd; }
-        .reviews-header { text-align: center; margin-bottom: 25px; }
-        .reviews-header h2 { color: #0a1d37; font-size: 1.4rem; margin: 0; font-weight: 800; }
-        .line-l { width: 60px; height: 3px; background: #c5a059; margin: 10px auto; border-radius: 5px; }
-        .reviews-header p { color: #666; font-size: 0.9rem; }
-        
-        .gold-quote { font-size: 35px; color: #c5a059; margin-bottom: 10px; display: block; opacity: 0.5; }
+
+        /* ===== آراء العملاء ===== */
+        .customers-reviews-l {
+            padding: 40px 15px;
+            background: #fdfdfd;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .reviews-header h2 {
+            color: #0a1d37;
+            font-size: 1.4rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .line-l {
+            width: 60px;
+            height: 3px;
+            background: #c5a059;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .gold-quote {
+            font-size: 35px;
+            color: #c5a059;
+            margin-bottom: 10px;
+            display: block;
+            opacity: 0.5;
+        }
 
         .reviews-scroller {
             display: flex;
@@ -479,28 +547,54 @@
             flex-direction: column;
         }
 
-        .card-top { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
         .user-avatar {
-            width: 55px; height: 55px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, #0a1d37, #1a3d6d);
             color: #c5a059;
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: bold; font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
             border: 2px solid #c5a059;
         }
 
-        .user-meta h4 { margin: 0; color: #0a1d37; font-size: 1rem; font-weight: 700; }
-        .stars-l { font-size: 13px; margin-top: 4px; }
+        .user-meta h4 {
+            margin: 0;
+            color: #0a1d37;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .stars-l {
+            font-size: 13px;
+            margin-top: 4px;
+        }
 
         .comment-text {
-            color: #444; font-size: 0.95rem; line-height: 1.7;
-            font-style: italic; margin-bottom: 15px;
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 15px;
             flex-grow: 1;
         }
-        
-        /* 10. الخريطة */
+
+        .review-date {
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        /* ===== الخريطة ===== */
         .compact-map-section {
             padding: 20px 15px;
             background: #fff;
@@ -554,14 +648,13 @@
             border: 1px solid #c5a059;
             transition: 0.3s;
         }
-
         .map-btn:active {
             transform: scale(0.95);
             background: #c5a059;
             color: #fff;
         }
-        
-        /* 11. SEO Keywords السفلية */
+
+        /* ===== شريط SEO السفلي ===== */
         .seo-keywords-bar {
             background: #07162b;
             padding: 5px 10px;
@@ -574,34 +667,27 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            animation: marquee 30s linear infinite;
         }
 
-        .keywords-content h1 {
+        .keywords-content strong {
             font-size: 11px;
             color: #c5a059;
             margin: 0;
             font-weight: bold;
-            display: inline-block;
         }
 
         .keywords-content span {
             font-size: 10px;
             color: #a0a0a0;
-            font-weight: normal;
-        }
-
-        @media (max-width: 600px) {
-            .keywords-content {
-                animation: marquee 30s linear infinite;
-            }
         }
 
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        
-        /* 12. الفوتر */
+
+        /* ===== الفوتر ===== */
         .app-footer {
             background: #0a1d37;
             color: #fff;
@@ -635,6 +721,7 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .social-btn {
@@ -672,14 +759,14 @@
             margin-top: 10px;
             font-size: 1rem;
         }
-        
+
         @media (min-width: 450px) {
             .img-box { height: 120px; }
             .item-label span { font-size: 0.9rem; }
         }
     </style>
     
-    <!-- ========== GOOGLE STRUCTURED DATA ========== -->
+    <!-- ========== STRUCTURED DATA ========== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -713,18 +800,19 @@
 </head>
 <body>
 
+    <!-- الشريط العلوي -->
     <div class="top-bar">
         <a href="tel:0552075677" class="phone">0552075677</a>
         <div class="social-icons">
-            <a href="https://wa.me/966552075677"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.tiktok.com/@ahsa.shades"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/al_ahsa_mizalaat"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/solomons456"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/share/17bH96Jg11/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/966552075677" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@ahsa.shades" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/al_ahsa_mizalaat" target="_blank" title="انستجرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/solomons456" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/share/17bH96Jg11/" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
         </div>
     </div>
 
-    <!-- ========== شريط الكلمات المفتاحية العلوي ========== -->
+    <!-- شريط الكلمات المفتاحية العلوي -->
     <div class="top-keywords-bar">
         <div class="keywords-marquee">
             <span class="keyword-item">مظلات الهفوف</span>
@@ -743,44 +831,15 @@
             <span class="keyword-item">ديكورات خارجية</span>
             <span class="keyword-item">بديل الخشب</span>
             <span class="keyword-item">شبابيك ألمنيوم</span>
-            <span class="keyword-item">تركيب مظلات</span>
-            <span class="keyword-item">سواتر بلاستيك</span>
-            <span class="keyword-item">هناجر شينكو</span>
-            <span class="keyword-item">قرميد إسباني</span>
-            <span class="keyword-item">خيام مناسبات</span>
-            <span class="keyword-item">بيوت شعر تراثية</span>
-            <span class="keyword-item">جلسات خارجية</span>
-            <span class="keyword-item">مظلات هرمية</span>
-            <span class="keyword-item">سواتر قماش</span>
-            <span class="keyword-item">هناجر زراعية</span>
-            <span class="keyword-item">برجولات حديد</span>
-            <span class="keyword-item">قرميد إيطالي</span>
-            <span class="keyword-item">خيام سيارات</span>
-            <span class="keyword-item">بيوت شعر حديثة</span>
-            <span class="keyword-item">حدائق منزلية</span>
-            <span class="keyword-item">عشب طبيعي</span>
-            <span class="keyword-item">سواتر معدنية</span>
-            <span class="keyword-item">مظلات مواقف</span>
-            <span class="keyword-item">هناجر صناعية</span>
-            <span class="keyword-item">برجولات حدائق</span>
-            <span class="keyword-item">واجهات قرميد</span>
-            <span class="keyword-item">خيام تخييم</span>
-            <span class="keyword-item">بيوت شعر أفراح</span>
-            <span class="keyword-item">تنسيق نباتي</span>
-            <span class="keyword-item">ديكورات حجرية</span>
-            <span class="keyword-item">شبابيك مقاومة</span>
-            <span class="keyword-item">تركيب سواتر</span>
-            <span class="keyword-item">هناجر تجارية</span>
-            <span class="keyword-item">مظلات قماشية</span>
-            <span class="keyword-item">سواتر خشبية</span>
-            <span class="keyword-item">قرميد فخاري</span>
-            <span class="keyword-item">بيوت شعر فخمة</span>
-            <span class="keyword-item">حدائق عمودية</span>
-            <span class="keyword-item">عشب صناعي حدائق</span>
-            <span class="keyword-item">سواتر خصوصية</span>
+            <!-- تكرار للمجموعة لضمان استمرار الحركة -->
+            <span class="keyword-item">مظلات الهفوف</span>
+            <span class="keyword-item">سواتر الأحساء</span>
+            <span class="keyword-item">حداد الأحساء</span>
+            <span class="keyword-item">هناجر ومستودعات</span>
         </div>
     </div>
 
+    <!-- الهيدر -->
     <header>
         <div class="brand">
             <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="logo-img">
@@ -792,193 +851,111 @@
         <a href="tel:0552075677" class="call-btn">اتصل الآن</a>
     </header>
 
+    <!-- شريط التحديث (ticker) -->
     <div class="ticker-container">
         <div class="ticker-label">تحديث 2026</div>
         <div class="ticker-wrapper">
             <div class="ticker-text">
-                <span>مرحباً بكم في مظلات وسواتر الهفوف الأحساء</span> • 
-                <span>نقدم لكم مجموعة متنوعة من الخدمات الاحترافية في الأحساء والشرقية</span> • 
-                <span class="gold-word">مظلات سيارات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام، مستودعات، بديل الخشب، ديكورات، قرميد، شبابيك ألمنيوم</span> • 
-                <span class="keyword-plus">أفضل حداد في الأحساء بأسعار 2026 • تركيب مظلات هرمية ومخروطية • متخصصون في القرميد الإسباني والإيطالي • أرقى تصاميم البرجولات الخشبية والحديدية • تركيب سواتر الحماية والخصوصية • صيانة دورية وضمان 10 سنوات • أفضل خامات الـ PVC والبوثلين</span> • 
-                <span class="social-call">تابعوا حساباتنا الرسمية على: (واتساب، انستجرام، فيس بوك، تويتر، تيك توك)</span> • 
-                <span>نشكركم لزيارة موقعنا الإلكتروني - نتمنى أن تعجبكم أعمالنا</span> • 
+                <span>مرحباً بكم في مظلات وسواتر الهفوف الأحساء</span> •
+                <span>نقدم لكم مجموعة متنوعة من الخدمات الاحترافية في الأحساء والشرقية</span> •
+                <span class="gold-word">مظلات سيارات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام، مستودعات، بديل الخشب، ديكورات، قرميد، شبابيك ألمنيوم</span> •
+                <span class="keyword-plus">أفضل حداد في الأحساء بأسعار 2026 • تركيب مظلات هرمية ومخروطية • متخصصون في القرميد الإسباني والإيطالي • أرقى تصاميم البرجولات الخشبية والحديدية • تركيب سواتر الحماية والخصوصية • صيانة دورية وضمان 10 سنوات • أفضل خامات الـ PVC والبوثلين</span> •
+                <span class="social-call">تابعوا حساباتنا الرسمية على: (واتساب، انستجرام، فيس بوك، تويتر، تيك توك)</span> •
+                <span>نشكركم لزيارة موقعنا الإلكتروني - نتمنى أن تعجبكم أعمالنا</span> •
                 <span class="gold-word">لا تتردد في طلب المعاينة المجانية في الأحساء الآن</span>
             </div>
+            <!-- نكرر المحتوى لضمان استمرارية الحركة -->
             <div class="ticker-text">
-                <span>مرحباً بكم في مظلات وسواتر الهفوف الأحساء</span> • 
-                <span class="gold-word">مظلات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام</span> • 
-                <span class="keyword-plus">أفضل حداد في الأحساء 2026 • خامات ألمانية وكورية • أفضل خيام ثابتة ومتنقلة • تركيب مظلات مواقف السيارات • حدادة فنية وخبرة طويلة</span> • 
-                <span class="social-call">تابعونا ليصلكم كل جديد</span> • 
+                <span>مرحباً بكم في مظلات وسواتر الهفوف الأحساء</span> •
+                <span class="gold-word">مظلات، هناجر، شينكو، برجولات، تنسيق حدائق، عشب صناعي، وبيوت شعر ملكية، سواتر، خيام</span> •
+                <span class="keyword-plus">أفضل حداد في الأحساء 2026 • خامات ألمانية وكورية • أفضل خيام ثابتة ومتنقلة • تركيب مظلات مواقف السيارات • حدادة فنية وخبرة طويلة</span> •
+                <span class="social-call">تابعونا ليصلكم كل جديد</span> •
                 <span>للمعاينة والطلب اتصل بنا الآن</span>
             </div>
         </div>
     </div>
 
-    <!-- زر واتساب عائم برابط مباشر -->
+    <!-- أزرار عائمة -->
     <div class="floating-contact">
-        <a href="https://wa.me/966552075677" class="f-icon f-whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/966552075677" class="f-icon f-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="tel:0552075677" class="f-icon f-phone"><i class="fas fa-phone-alt"></i></a>
     </div>
 
-    <!-- السلايدر -->
-    <div class="slider-container">
-        <div class="slides" id="mainSlider">
-            <div class="slide">
-                <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572_120.jpg" alt="هناجر ومستودعات">
-                <div class="slide-caption">
-                    <h3>هناجر ومستودعات</h3>
-                    <p>تنفيذ وتصميم المستودعات والهناجر بأعلى جودة</p>
-                </div>
+    <!-- القسم الرئيسي الجديد (خلفية ثابتة بدلاً من السلايدر) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>مظلات وسواتر الهفوف 2026</h2>
+            <p>أفضل خدمات الحدادة والمظلات في الأحساء والمنطقة الشرقية</p>
+            
+            <div class="hero-features">
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> هناجر ومستودعات</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> مظلات سيارات</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> سواتر حماية</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> برجولات خشبية</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> قرميد فاخر</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> تنسيق حدائق</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> ديكورات بديل خشب</span>
+                <span class="hero-feature"><i class="fas fa-check-circle"></i> شبابيك ألمنيوم</span>
             </div>
 
-            <div class="slide">
-                <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698_120.jpg" alt="مظلات">
-                <div class="slide-caption">
-                    <h3>مظلات سيارات وهرمية</h3>
-                    <p>أحدث تصاميم المظلات القماشية والحديدية</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/bvcpKC7W/5285107341525191510_120.jpg" alt="خيام وبيوت شعر">
-                <div class="slide-caption">
-                    <h3>خيام وبيوت شعر ملكية</h3>
-                    <p>فخامة التراث بلمسات ملكية حديثة</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818_121.jpg" alt="قرميد">
-                <div class="slide-caption">
-                    <h3>قرميد فاخر</h3>
-                    <p>تركيب كافة أنواع القرميد المعدني والفخاري</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524_119.jpg" alt="ديكورات وبديل خشب">
-                <div class="slide-caption">
-                    <h3>ديكورات وبديل خشب</h3>
-                    <p>تجميل الواجهات والجدران بأرقى الديكورات</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/wMdWzJqR/5296776303811955485_121.jpg" alt="سواتر">
-                <div class="slide-caption">
-                    <h3>سواتر منزلية</h3>
-                    <p>سواتر حديد وبلاستيك وقماش لتوفير الخصوصية</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/kGVHM98W/5289875884800150546_121.jpg" alt="تنسيق حدائق">
-                <div class="slide-caption">
-                    <h3>تنسيق حدائق</h3>
-                    <p>عشب صناعي وجلسات خارجية متميزة</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/GmSsGCsz/5285107341525191459_120.jpg" alt="برجولات">
-                <div class="slide-caption">
-                    <h3>برجولات وجلسات</h3>
-                    <p>أرقى الجلسات الخارجية والبرجولات</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="https://i.postimg.cc/DZqKhYVz/IMG_20260128_WA0035.jpg" alt="شبابيك">
-                <div class="slide-caption">
-                    <h3>شبابيك ألمنيوم</h3>
-                    <p>تركيب شبابيك عصرية مقاومة للحرارة والغبار</p>
-                </div>
+            <div class="hero-buttons">
+                <a href="tel:0552075677" class="hero-btn hero-btn-primary"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+                <a href="hangars.html" class="hero-btn hero-btn-secondary"><i class="fas fa-briefcase"></i> شاهد أعمالنا</a>
+                <a href="https://wa.me/966552075677" class="hero-btn hero-btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
             </div>
         </div>
+    </section>
 
-        <div class="slider-nav">
-            <button onclick="changeSlide(1)">&#10094;</button>
-            <button onclick="changeSlide(-1)">&#10095;</button>
-        </div>
-    </div>
-
-    <!-- أقسام الخدمات -->
+    <!-- شبكة الخدمات -->
     <section class="services-app-grid">
         <div class="grid-header">
             <h2>أقسامنا الرئيسية</h2>
             <div class="accent-line"></div>
         </div>
-
         <div class="app-grid">
             <a href="hangars.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572_120.jpg" alt="هناجر ومستودعات">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/yYc66z7p/5285107341525191572-120.jpg" alt="هناجر ومستودعات"></div>
                 <div class="item-label"><span>هناجر ومستودعات</span></div>
             </a>
-
             <a href="shades.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698_120.jpg" alt="مظلات">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/Cx88V22f/5361556363529621698-120.jpg" alt="مظلات"></div>
                 <div class="item-label"><span>مظلات</span></div>
             </a>
-
             <a href="tents.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/bvcpKC7W/5285107341525191510_120.jpg" alt="خيام">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/bvcpKC7W/5285107341525191510-120.jpg" alt="خيام"></div>
                 <div class="item-label"><span>خيام وبيوت شعر</span></div>
             </a>
-
             <a href="screens.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/wMdWzJqR/5296776303811955485_121.jpg" alt="سواتر">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/wMdWzJqR/5296776303811955485-121.jpg" alt="سواتر"></div>
                 <div class="item-label"><span>سواتر حديثة</span></div>
             </a>
-
             <a href="pergolas.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/GmSsGCsz/5285107341525191459_120.jpg" alt="برجولات">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/GmSsGCsz/5285107341525191459-120.jpg" alt="برجولات"></div>
                 <div class="item-label"><span>برجولات</span></div>
             </a>
-
             <a href="tiles.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818_121.jpg" alt="قرميد">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818-121.jpg" alt="قرميد"></div>
                 <div class="item-label"><span>قرميد فاخر</span></div>
             </a>
-
             <a href="decor.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524_119.jpg" alt="ديكورات">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524-119.jpg" alt="ديكورات"></div>
                 <div class="item-label"><span>ديكورات وبديل خشب</span></div>
             </a>
-
             <a href="gardens.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/kGVHM98W/5289875884800150546_121.jpg" alt="تنسيق حدائق">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/kGVHM98W/5289875884800150546-121.jpg" alt="تنسيق حدائق"></div>
                 <div class="item-label"><span>تنسيق حدائق</span></div>
             </a>
-
             <a href="windows.html" class="grid-item">
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/DZqKhYVz/IMG_20260128_WA0035.jpg" alt="شبابيك">
-                </div>
+                <div class="img-box"><img src="https://i.postimg.cc/DZqKhYVz/IMG-20260128-WA0035.jpg" alt="شبابيك"></div>
                 <div class="item-label"><span>شبابيك ألمنيوم</span></div>
             </a>
         </div>
     </section>
 
-    <!-- ========== شريط الكلمات المفتاحية بعد الأقسام ========== -->
+    <!-- قسم الكلمات المفتاحية بعد الأقسام -->
     <section class="keywords-after-sections">
         <div class="keywords-container">
-            <h3 class="keywords-title">خدماتنا المتخصصة في الأحساء والمنطقة الشرقية</h3>
+            <h2 class="keywords-title">خدماتنا المتخصصة في الأحساء والمنطقة الشرقية</h2>
             <div class="keywords-cloud">
                 <a href="hangars.html" class="keyword-tag">هناجر الأحساء</a>
                 <a href="shades.html" class="keyword-tag">مظلات الهفوف</a>
@@ -998,42 +975,6 @@
                 <a href="decor.html" class="keyword-tag">بديل الخشب</a>
                 <a href="gardens.html" class="keyword-tag">عشب صناعي</a>
                 <a href="windows.html" class="keyword-tag">شبابيك مقاومة</a>
-                <a href="hangars.html" class="keyword-tag">هناجر زراعية</a>
-                <a href="shades.html" class="keyword-tag">مظلات هرمية</a>
-                <a href="tents.html" class="keyword-tag">خيام تخييم</a>
-                <a href="screens.html" class="keyword-tag">سواتر خصوصية</a>
-                <a href="pergolas.html" class="keyword-tag">جلسات خارجية</a>
-                <a href="tiles.html" class="keyword-tag">واجهات قرميد</a>
-                <a href="decor.html" class="keyword-tag">ديكورات حجرية</a>
-                <a href="gardens.html" class="keyword-tag">حدائق منزلية</a>
-                <a href="windows.html" class="keyword-tag">شبابيك حديثة</a>
-                <a href="hangars.html" class="keyword-tag">هناجر شينكو</a>
-                <a href="shades.html" class="keyword-tag">مظلات قماشية</a>
-                <a href="tents.html" class="keyword-tag">بيوت شعر أفراح</a>
-                <a href="screens.html" class="keyword-tag">سواتر خشبية</a>
-                <a href="pergolas.html" class="keyword-tag">برجولات حدائق</a>
-                <a href="tiles.html" class="keyword-tag">قرميد إيطالي</a>
-                <a href="decor.html" class="keyword-tag">تشطيب واجهات</a>
-                <a href="gardens.html" class="keyword-tag">عشب طبيعي</a>
-                <a href="windows.html" class="keyword-tag">شبابيك عازلة</a>
-                <a href="hangars.html" class="keyword-tag">مستودعات تجارية</a>
-                <a href="shades.html" class="keyword-tag">مظلات مواقف</a>
-                <a href="tents.html" class="keyword-tag">خيام سيارات</a>
-                <a href="screens.html" class="keyword-tag">سواتر معدنية</a>
-                <a href="pergolas.html" class="keyword-tag">برجولات فخمة</a>
-                <a href="tiles.html" class="keyword-tag">قرميد فخاري</a>
-                <a href="decor.html" class="keyword-tag">ديكورات واجهات</a>
-                <a href="gardens.html" class="keyword-tag">حدائق عمودية</a>
-                <a href="windows.html" class="keyword-tag">شبابيك PVC</a>
-                <a href="hangars.html" class="keyword-tag">هناجر كبيرة</a>
-                <a href="shades.html" class="keyword-tag">مظلات مخروطية</a>
-                <a href="tents.html" class="keyword-tag">خيام مناسبات</a>
-                <a href="screens.html" class="keyword-tag">سواتر قماش</a>
-                <a href="pergolas.html" class="keyword-tag">برجولات مظللة</a>
-                <a href="tiles.html" class="keyword-tag">قرميد سقوف</a>
-                <a href="decor.html" class="keyword-tag">ديكورات سيراميك</a>
-                <a href="gardens.html" class="keyword-tag">نوافير حدائق</a>
-                <a href="windows.html" class="keyword-tag">شبابيك ألمنيوم حديثة</a>
             </div>
         </div>
     </section>
@@ -1046,141 +987,55 @@
             <div class="line-l"></div>
             <p>نعتز بخدمة عملائنا الكرام وتقديم أفضل معايير الجودة 2026</p>
         </div>
-
         <div class="reviews-scroller">
-            
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">س</div>
-                    <div class="user-meta">
-                        <h4>أبو سامي السبيعي</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>أبو سامي السبيعي</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"ركبت مظلات سيارات قماش الماني، جودة الحديد ممتازة والتركيب كان سريع جداً وفريق العمل محترم."</p>
                 <span class="review-date">منذ يومين</span>
             </div>
-
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">خ</div>
-                    <div class="user-meta">
-                        <h4>م. خالد الدوسري</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>م. خالد الدوسري</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"تعاملت معهم في بناء هناجر لمصنعنا، دقة في المخططات والتزام كامل بالجدول الزمني. شركة يعتمد عليها."</p>
                 <span class="review-date">منذ 3 أيام</span>
             </div>
-
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">ن</div>
-                    <div class="user-meta">
-                        <h4>ناصر الهاجري</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>ناصر الهاجري</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"بيت الشعر الملكي اللي صممتوه صار حديث الضيوف في استراحتي، فخامة وشغل يبيض الوجه."</p>
                 <span class="review-date">منذ أسبوع</span>
             </div>
-
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">ف</div>
-                    <div class="user-meta">
-                        <h4>فيصل الشمري</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>فيصل الشمري</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"تنسيق الحديقة والعشب الصناعي غير شكل البيت تماماً، اللمسات الفنية عندهم رائعة جداً."</p>
                 <span class="review-date">منذ أسبوع</span>
             </div>
-
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">ع</div>
-                    <div class="user-meta">
-                        <h4>عادل البراهيم</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>عادل البراهيم</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"شبابيك الألمنيوم عزلها للحرارة والصوت ممتاز جداً، فرق معي كثير في فاتورة الكهرباء والهدوء."</p>
                 <span class="review-date">منذ 10 أيام</span>
             </div>
-
             <div class="review-card-l">
                 <div class="card-top">
                     <div class="user-avatar">ج</div>
-                    <div class="user-meta">
-                        <h4>جابر القحطاني</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
+                    <div class="user-meta"><h4>جابر القحطاني</h4><div class="stars-l">⭐⭐⭐⭐⭐</div></div>
                 </div>
                 <p class="comment-text">"ركبت قرميد معدني للملحق الخارجي، اللون ثابت والشكل عصري جداً، شكراً لكم."</p>
                 <span class="review-date">منذ أسبوعين</span>
             </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
-                    <div class="user-avatar">س</div>
-                    <div class="user-meta">
-                        <h4>سعد العتيبي</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"السواتر وفرت لنا خصوصية كاملة في الحوش، واللون متناسق تماماً مع صبغة الفلل."</p>
-                <span class="review-date">منذ شهر</span>
-            </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
-                    <div class="user-avatar">ر</div>
-                    <div class="user-meta">
-                        <h4>راشد المري</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"برجولة الجلسة الخارجية صارت مكاني المفضل، الحديد واللكسان جودتهم عالية جداً."</p>
-                <span class="review-date">منذ شهر</span>
-            </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
-                    <div class="user-avatar">م</div>
-                    <div class="user-meta">
-                        <h4>محمد المطيري</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"بديل الخشب عطى واجهة المحل منظر فخم جداً، التنفيذ كان نظيف والعمالة محترفة."</p>
-                <span class="review-date">منذ شهرين</span>
-            </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
-                    <div class="user-avatar">أ</div>
-                    <div class="user-meta">
-                        <h4>أحمد الزهراني</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"مصداقية في التعامل وسرعة في الرد على الاستفسارات، فعلاً تطبيق وموقع يسهل علينا الوصول لخدماتكم."</p>
-                <span class="review-date">منذ 3 أشهر</span>
-            </div>
-
-            <div class="review-card-l">
-                <div class="card-top">
-                    <div class="user-avatar">ي</div>
-                    <div class="user-meta">
-                        <h4>يوسف الخالدي</h4>
-                        <div class="stars-l">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="comment-text">"حداد فنان وشغل هندسي مرتب، الله يوفقكم ويرزقكم، فخورين بوجودكم في الهفوف."</p>
-                <span class="review-date">منذ 3 أشهر</span>
-            </div>
-
         </div>
     </section>
 
@@ -1190,30 +1045,20 @@
             <h3><i class="fas fa-map-marker-alt"></i> موقعنا في الأحساء</h3>
             <div class="title-line"></div>
         </div>
-
         <div class="map-box">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115162.7753177817!2d49.49755100868511!3d25.40523053896425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e379768a8f15f91%3A0x6a0562e873138374!2z2KfZhNmH2YHydmY!5e0!3m2!1sar!2ssa!4v1700000000000" 
-                width="100%" 
-                height="240" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115162.7753177817!2d49.49755100868511!3d25.40523053896425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e379768a8f15f91%3A0x6a0562e873138374!2z2KfZhNmH2YHydmY!5e0!3m2!1sar!2ssa!4v1700000000000" width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <div class="map-action">
                 <a href="https://maps.app.goo.gl/Yy1G8NnAtQG3fMvQ7" target="_blank" class="map-btn">
-                    <i class="fas fa-location-arrow"></i>
-                    فتح الموقع عبر قوقل ماب
+                    <i class="fas fa-location-arrow"></i> فتح الموقع عبر قوقل ماب
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEO Keywords -->
+    <!-- شريط SEO السفلي -->
     <div class="seo-keywords-bar">
         <div class="keywords-content">
-            <h1>مظلات وسواتر الهفوف الأحساء</h1> 
+            <strong>مظلات وسواتر الهفوف الأحساء</strong>
             <span>• حداد مظلات الأحساء • تركيب سواتر الهفوف • هناجر ومستودعات المنطقة الشرقية • قرميد معدني • بيوت شعر ملكية • تنسيق حدائق بالأحساء • ديكورات بديل الخشب • شبابيك ألمنيوم • تركيب برجولات جلسات • أفضل ورشة حدادة في الهفوف • مظلات سيارات حديثة 2026</span>
         </div>
     </div>
@@ -1222,66 +1067,27 @@
     <footer class="app-footer">
         <div class="footer-container">
             <div class="footer-about">
-                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="Logo" class="footer-logo">
+                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="footer-logo">
                 <p>نعمل في الأحساء والمنطقة الشرقية لتقديم أجود خدمات الحدادة والمظلات بخبرة تمتد لسنوات.</p>
             </div>
-
             <div class="footer-social">
                 <h3>تابع أعمالنا على:</h3>
                 <div class="social-icons-footer">
-                    <a href="https://www.tiktok.com/@ahsa.shades?_r=1&_t=ZS-93S8hg9LC69" class="social-btn tiktok" target="_blank">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.instagram.com/al_ahsa_mizalaat?igsh=OWN1OHliaTN6c25h" class="social-btn instagram" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/solomons456" class="social-btn x-twitter" target="_blank">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/17bH96Jg11/" class="social-btn facebook" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/966552075677" class="social-btn whatsapp-catalog" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                    <a href="https://www.tiktok.com/@ahsa.shades?_r=1&_t=ZS-93S8hg9LC69" class="social-btn tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/al_ahsa_mizalaat?igsh=OWN1OHliaTN6c25h" class="social-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/solomons456" class="social-btn x-twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/17bH96Jg11/" class="social-btn facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/966552075677" class="social-btn whatsapp-catalog" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>© 2026 جميع الحقوق محفوظة | تنفيذ أعمال المظلات والأحساء</p>
                 <div class="contact-quick">
-                    <a href="tel:0551987351"><i class="fas fa-phone"></i> 
-                   0551987351 تصميم سليمان</a>
+                    <a href="tel:0552075677"><i class="fas fa-phone"></i> 0552075677 تصميم وتنفيذ</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript للسلايدر -->
-    <script>
-        let sliderIndex = 0;
-        const slidesContainer = document.getElementById('mainSlider');
-        const slidesCount = document.querySelectorAll('.slide').length;
-
-        function updateSlider() {
-            slidesContainer.style.transform = `translateX(${sliderIndex * 100}%)`;
-        }
-
-        function changeSlide(n) {
-            sliderIndex += n;
-            if (sliderIndex >= slidesCount) sliderIndex = 0;
-            if (sliderIndex < 0) sliderIndex = slidesCount - 1;
-            updateSlider();
-        }
-
-        // التحريك التلقائي كل 5 ثواني
-        setInterval(() => changeSlide(1), 5000);
-        
-        // تهيئة السلايدر عند التحميل
-        document.addEventListener('DOMContentLoaded', function() {
-            updateSlider();
-        });
-    </script>
-    
 </body>
 </html>
