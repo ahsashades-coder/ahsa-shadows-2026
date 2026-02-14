@@ -1,87 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هناجر ومستودعات وسندويش بنل 2026 | مقاولات الأحساء</title>
+    <!-- وصف ميتا محسّن وفريد لهذه الصفحة -->
+    <meta name="description" content="أرخص أسعار الهناجر والمستودعات في الأحساء والهفوف. تركيب هناجر حديد، شينكو، سندويش بنل معزول، مستودعات زراعية وصناعية. ضمان وجودة. اتصل الآن 0552075677">
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg">
+    <!-- Font Awesome للأيقونات (تم دمجه مرة واحدة) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ========== المتغيرات الأساسية ========== */
+        :root {
+            --blue: #0a1d37;
+            --gold: #c5a059;
+            --green: #27ae60;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ========== الترويسة العلوية (slim-header) ========== */
+        .slim-full-header {
+            background: var(--blue);
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 5000;
+            border-bottom: 3px solid var(--gold);
+            padding: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .slim-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            max-width: 100%;
+        }
+
+        .slim-title-box {
+            text-align: center;
+        }
+
+        .slim-title-box h1 {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .slim-title-box p {
+            color: var(--gold);
+            font-size: 0.7rem;
+            margin: 3px 0 0 0;
+            font-weight: bold;
+        }
+
+        .slim-nav-link {
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .slim-call-icon {
+            background: var(--gold);
+            color: var(--blue);
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+        }
+
+        /* ========== قسم الهيرو (بدون تظليل) ========== */
+        .hangar-hero-clear {
+            width: 100%;
+            height: 550px;
+            background: url('https://i.postimg.cc/L4r6MsFx/5285107341525191585-121.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero-text-container {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .shadow-text {
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 1), 
+                         -1px -1px 0 rgba(0,0,0,0.5), 
+                          1px -1px 0 rgba(0,0,0,0.5);
+        }
+
+        .hero-text-container h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hero-line {
+            width: 100px;
+            height: 5px;
+            background: var(--gold);
+            margin: 15px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-text-container p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .hero-features-list {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 35px;
+            font-size: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-features-list i {
+            color: var(--gold);
+        }
+
+        .hero-whatsapp-btn {
+            background: #25d366;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .hero-whatsapp-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* ========== شبكة صور الهناجر ========== */
+        .hangar-grid-container {
+            padding: 30px 10px;
+            background: #fff;
+        }
+
+        .h-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 35px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .h-card {
+            background: #fdfdfd;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .h-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 4px solid var(--blue);
+        }
+
+        .h-info {
+            padding: 20px;
+            text-align: right;
+        }
+
+        .h-price {
+            color: var(--green);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .h-tags {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        .h-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ========== التذييل ========== */
+        .industrial-footer {
+            background: var(--blue);
+            color: #fff;
+            padding: 40px 20px 100px; /* مساحة للأزرار الثابتة */
+            text-align: center;
+            border-top: 4px solid var(--gold);
+        }
+
+        .footer-logo {
+            height: 70px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .f-brand-box h3 {
+            color: var(--gold);
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .f-brand-box p {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        .social-label {
+            margin: 25px 0 15px;
+            font-weight: bold;
+        }
+
+        .social-icons-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            color: var(--blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* ألوان أيقونات التواصل عند العرض (لون العلامة التجارية) */
+        .whatsapp { color: #25D366; }
+        .tiktok { color: #000000; }
+        .insta { color: #E1306C; }
+        .x-twitter { color: #000000; }
+        .facebook { color: #1877F2; }
+
+        .icon-circle:active {
+            transform: scale(0.9);
+        }
+
+        .separator-line {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .footer-phone {
+            display: block;
+            color: var(--gold);
+            font-size: 1.4rem;
+            font-weight: 900;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        /* ========== شريط التواصل الثابت ========== */
+        .contact-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 15px;
+            right: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            z-index: 1001;
+        }
+
+        .c-btn {
+            padding: 16px 0;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .c-btn i {
+            margin-left: 8px;
+        }
+
+        .wa {
+            background: #25d366;
+        }
+
+        .wa:hover {
+            background: #20b859;
+        }
+
+        .ph {
+            background: var(--blue);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .ph:hover {
+            background: #1a2f4e;
+        }
+
+        /* ========== تحسينات الجوال ========== */
+        @media (max-width: 600px) {
+            .hero-text-container h2 { font-size: 1.5rem; }
+            .hero-features-list { flex-direction: column; gap: 10px; }
+        }
+
+        @media (max-width: 400px) {
+            .slim-title-box h1 { font-size: 0.9rem; }
+            .slim-title-box p { font-size: 0.65rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- الترويسة العلوية (slim header) -->
 <header class="slim-full-header">
     <div class="slim-container">
-        
-        <a href="index.html" class="slim-nav-link">
+        <a href="index.html" class="slim-nav-link" title="العودة للرئيسية">
             <i class="fas fa-chevron-right"></i>
         </a>
-
         <div class="slim-title-box">
             <h1>هناجر ومستودعات وسندويش بنل 2026</h1>
             <p>مقاولات الأحساء - أرخص الأسعار</p>
         </div>
-
-        <a href="tel:0552075677" class="slim-call-icon">
+        <a href="tel:0552075677" class="slim-call-icon" title="اتصل الآن">
             <i class="fas fa-phone-alt"></i>
         </a>
-
     </div>
 </header>
 
-<style>
-    .slim-full-header {
-        background: #0a1d37;
-        width: 100%;
-        position: sticky;
-        top: 0;
-        z-index: 5000;
-        border-bottom: 3px solid #c5a059;
-        padding: 10px 0; /* تقليل المساحة الرأسية */
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    .slim-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-        max-width: 100%;
-    }
-
-    .slim-title-box {
-        text-align: center;
-    }
-
-    .slim-title-box h1 {
-        color: #fff;
-        font-size: 1rem; /* تصغير الخط */
-        margin: 0;
-        font-weight: 800;
-        line-height: 1.2;
-    }
-
-    .slim-title-box p {
-        color: #c5a059;
-        font-size: 0.7rem; /* خط فرعي صغير جداً */
-        margin: 3px 0 0 0;
-        font-weight: bold;
-    }
-
-    .slim-nav-link {
-        color: #fff;
-        font-size: 1.2rem;
-        text-decoration: none;
-    }
-
-    .slim-call-icon {
-        background: #c5a059;
-        color: #0a1d37;
-        width: 35px;
-        height: 35px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 1rem;
-        box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
-    }
-
-    /* تحسين للجوال */
-    @media (max-width: 400px) {
-        .slim-title-box h1 { font-size: 0.9rem; }
-        .slim-title-box p { font-size: 0.65rem; }
-    }
-</style>
+<!-- قسم الهيرو -->
 <section class="hangar-hero-clear">
     <div class="hero-text-container">
         <h2 class="shadow-text">مقاولات الهناجر والمستودعات الكبرى</h2>
@@ -93,100 +390,18 @@
             <span class="shadow-text"><i class="fas fa-check-circle"></i> أرخص الأسعار</span>
         </div>
 
-        <a href="https://wa.me/966552075677" class="hero-whatsapp-btn">
+        <a href="https://wa.me/966552075677" class="hero-whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i> استشارة مجانية عبر واتساب
         </a>
     </div>
 </section>
 
-<style>
-    .hangar-hero-clear {
-        width: 100%;
-        height: 550px;
-        /* عرض الصورة الأصلية بدون أي طبقات ألوان فوقها */
-        background: url('https://i.postimg.cc/L4r6MsFx/5285107341525191585-121.jpg');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 5px solid #c5a059;
-    }
-
-    .hero-text-container {
-        text-align: center;
-        color: #fff;
-        padding: 20px;
-    }
-
-    /* جعل النص واضحاً فوق الصورة بدون تظليل الصورة نفسها */
-    .shadow-text {
-        text-shadow: 2px 2px 15px rgba(0, 0, 0, 1), 
-                     -1px -1px 0 rgba(0,0,0,0.5), 
-                      1px -1px 0 rgba(0,0,0,0.5);
-    }
-
-    .hero-text-container h2 {
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 10px;
-    }
-
-    .hero-line {
-        width: 100px;
-        height: 5px;
-        background: #c5a059;
-        margin: 15px auto;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-text-container p {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    .hero-features-list {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 35px;
-        font-size: 1rem;
-    }
-
-    .hero-features-list i {
-        color: #c5a059;
-    }
-
-    .hero-whatsapp-btn {
-        background: #25d366;
-        color: #fff;
-        text-decoration: none;
-        padding: 15px 35px;
-        border-radius: 50px;
-        font-weight: 900;
-        font-size: 1.1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        transition: 0.3s;
-    }
-
-    .hero-whatsapp-btn:active {
-        transform: scale(0.9);
-    }
-
-    @media (max-width: 600px) {
-        .hero-text-container h2 { font-size: 1.5rem; }
-        .hero-features-list { flex-direction: column; gap: 10px; }
-    }
-</style>
+<!-- شبكة صور الهناجر والمستودعات -->
 <section class="hangar-grid-container">
     <div class="h-grid">
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/tJKpm5VF/5285107341525191571-120.jpg" alt="بناء هناجر الأحساء">
+            <img src="https://i.postimg.cc/tJKpm5VF/5285107341525191571-120.jpg" alt="بناء هناجر الأحساء - مقاول هناجر حديد">
             <div class="h-info">
                 <p class="h-price">أرخص مقاول هناجر ومستودعات</p>
                 <div class="h-tags">#هناجر_الأحساء #حي_السلمانية #مقاولات_2026</div>
@@ -194,7 +409,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/KjkmNV40/5285107341525191572-120.jpg" alt="مستودعات شينكو">
+            <img src="https://i.postimg.cc/KjkmNV40/5285107341525191572-120.jpg" alt="مستودعات شينكو معزولة الهفوف">
             <div class="h-info">
                 <p class="h-price">أرخص أسعار الشينكو والمستودعات</p>
                 <div class="h-tags">#مستودعات_الهفوف #حي_المزروع #شينكو_معزول</div>
@@ -202,7 +417,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/wMCgbVsh/5285107341525191573-120.jpg" alt="سندويش بنل الأحساء">
+            <img src="https://i.postimg.cc/wMCgbVsh/5285107341525191573-120.jpg" alt="غرف سندويش بنل معزولة الأحساء">
             <div class="h-info">
                 <p class="h-price">أرخص غرف سندويش بنل معزولة</p>
                 <div class="h-tags">#سندويش_بنل #حي_الخالدية #غرف_جاهزة</div>
@@ -210,7 +425,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/VvrzRT5g/5285107341525191574-121.jpg" alt="تركيب هناجر">
+            <img src="https://i.postimg.cc/VvrzRT5g/5285107341525191574-121.jpg" alt="تركيب هناجر المبرز بأقل سعر">
             <div class="h-info">
                 <p class="h-price">أرخص سعر متر للهناجر في المبرز</p>
                 <div class="h-tags">#هناجر_المبرز #حي_النسيم #تركيب_مستودعات</div>
@@ -218,7 +433,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/HncT2Kjt/5285107341525191575-120.jpg" alt="مستودعات حديد">
+            <img src="https://i.postimg.cc/HncT2Kjt/5285107341525191575-120.jpg" alt="مستودعات حديد صناعية حي النايفية">
             <div class="h-info">
                 <p class="h-price">أرخص تنفيذ للمشاريع الصناعية</p>
                 <div class="h-tags">#حي_النايفية #مقاول_هناجر #الأحساء_الآن</div>
@@ -226,7 +441,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/J0fMdqBZ/5285107341525191576-119.jpg" alt="هناجر تجارية">
+            <img src="https://i.postimg.cc/J0fMdqBZ/5285107341525191576-119.jpg" alt="مستودعات تجارية ضخمة حي الجامعة">
             <div class="h-info">
                 <p class="h-price">أرخص بناء مستودعات تجارية ضخمة</p>
                 <div class="h-tags">#حي_الجامعة #مستودعات_للإيجار #بناء_حديد</div>
@@ -234,7 +449,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/vTgGzjD3/5285107341525191582-121.jpg" alt="شينكو الأحساء">
+            <img src="https://i.postimg.cc/vTgGzjD3/5285107341525191582-121.jpg" alt="شينكو ومظلات مستودعات حي الروضة">
             <div class="h-info">
                 <p class="h-price">أرخص تركيب شينكو ومظلات مستودعات</p>
                 <div class="h-tags">#حي_الروضة #شينكو #تغطية_مستودعات</div>
@@ -242,7 +457,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/KjkmNV4n/5285107341525191583-121.jpg" alt="غرف معزولة">
+            <img src="https://i.postimg.cc/KjkmNV4n/5285107341525191583-121.jpg" alt="غرف تبريد وسندويش بنل حي البندرية">
             <div class="h-info">
                 <p class="h-price">أرخص غرف تبريد وسندويش بنل</p>
                 <div class="h-tags">#حي_البندرية #سندويش_بنل #غرف_معزولة</div>
@@ -250,7 +465,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/wMy9VP3t/5285107341525191586-121.jpg" alt="مقاولات حديد">
+            <img src="https://i.postimg.cc/wMy9VP3t/5285107341525191586-121.jpg" alt="مقاولات حديد وهناجر شينكو الهفوف">
             <div class="h-info">
                 <p class="h-price">أرخص مقاولات حديد وهناجر شينكو</p>
                 <div class="h-tags">#الهفوف #حي_المعلم #تركيب_هناجر</div>
@@ -258,7 +473,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/C5BwNtdG/5285107341525191587-119.jpg" alt="مستودعات معزولة">
+            <img src="https://i.postimg.cc/C5BwNtdG/5285107341525191587-119.jpg" alt="عوازل مائية وحرارية للمستودعات حي الأندلس">
             <div class="h-info">
                 <p class="h-price">أرخص عوازل مائية وحرارية للمستودعات</p>
                 <div class="h-tags">#حي_الأندلس #عزل_هناجر #المنطقة_الشرقية</div>
@@ -266,7 +481,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/J0DRqgtD/5285107341525191588-121.jpg" alt="تصميم هناجر">
+            <img src="https://i.postimg.cc/J0DRqgtD/5285107341525191588-121.jpg" alt="تصاميم هناجر ومستودعات 2026 حي الياسمين">
             <div class="h-info">
                 <p class="h-price">أرخص تصاميم هناجر ومستودعات 2026</p>
                 <div class="h-tags">#حي_الياسمين #تصميم_هناجر #مقاول_الأحساء</div>
@@ -274,7 +489,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/L5YmT7hJ/5348356309826342745-120.jpg" alt="سندويش بنل 2026">
+            <img src="https://i.postimg.cc/L5YmT7hJ/5348356309826342745-120.jpg" alt="ملاحق سندويش بنل في السطح حي التعاون">
             <div class="h-info">
                 <p class="h-price">أرخص ملاحق سندويش بنل في السطح</p>
                 <div class="h-tags">#حي_التعاون #ملاحق_سندويش_بنل #بناء_سريع</div>
@@ -282,7 +497,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/zvbqjM3V/5348356309826342746-120.jpg" alt="هناجر ورش">
+            <img src="https://i.postimg.cc/zvbqjM3V/5348356309826342746-120.jpg" alt="بناء ورش وهناجر صناعية حي النزهة">
             <div class="h-info">
                 <p class="h-price">أرخص بناء ورش وهناجر صناعية</p>
                 <div class="h-tags">#صناعية_الأحساء #حي_النزهة #هناجر_ورش</div>
@@ -290,7 +505,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/8cJTH3sc/5348356309826342747-120.jpg" alt="مستودعات أغذية">
+            <img src="https://i.postimg.cc/8cJTH3sc/5348356309826342747-120.jpg" alt="مستودعات معزولة للسندويش بنل حي البصيرة">
             <div class="h-info">
                 <p class="h-price">أرخص مستودعات معزولة للسندويش بنل</p>
                 <div class="h-tags">#حي_البصيرة #مستودعات_أغذية #مقاول_معتمد</div>
@@ -298,7 +513,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/HncT2KjL/5348356309826342748-120.jpg" alt="هناجر زراعية">
+            <img src="https://i.postimg.cc/HncT2KjL/5348356309826342748-120.jpg" alt="هناجر زراعية ومستودعات مزارع الأحساء">
             <div class="h-info">
                 <p class="h-price">أرخص هناجر ومستودعات زراعية</p>
                 <div class="h-tags">#مزارع_الأحساء #حي_القدس #هناجر_مزارع</div>
@@ -306,7 +521,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/90RcpSzQ/5348356309826342749-120.jpg" alt="بناء مستودعات">
+            <img src="https://i.postimg.cc/90RcpSzQ/5348356309826342749-120.jpg" alt="توريد وتركيب هناجر حي المنار">
             <div class="h-info">
                 <p class="h-price">أرخص سعر توريد وتركيب هناجر</p>
                 <div class="h-tags">#حي_المنار #مقاولات_مستودعات #الشرقية</div>
@@ -314,7 +529,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/0jM9f3rr/5348356309826342751-120.jpg" alt="هناجر شينكو رخيصة">
+            <img src="https://i.postimg.cc/0jM9f3rr/5348356309826342751-120.jpg" alt="شينكو وبنل رخيص حي الشروق">
             <div class="h-info">
                 <p class="h-price">أرخص شينكو وبنل في الأحساء</p>
                 <div class="h-tags">#حي_الشروق #هناجر_شينكو #ارخص_سعر</div>
@@ -322,7 +537,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/BbLJgytS/5361556363529621860-121.jpg" alt="مستودعات معالجة">
+            <img src="https://i.postimg.cc/BbLJgytS/5361556363529621860-121.jpg" alt="هناجر معزولة حرارياً حي العزيزية">
             <div class="h-info">
                 <p class="h-price">أرخص حلول الهناجر المعزولة حرارياً</p>
                 <div class="h-tags">#حي_العزيزية #عوازل_حرارية #هناجر_حديثة</div>
@@ -330,7 +545,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/kG67cZDM/5361556363529621861-121.jpg" alt="غرف جاهزة بنل">
+            <img src="https://i.postimg.cc/kG67cZDM/5361556363529621861-121.jpg" alt="غرف ومكاتب سندويش بنل حي الفاضلية">
             <div class="h-info">
                 <p class="h-price">أرخص غرف ومكاتب سندويش بنل</p>
                 <div class="h-tags">#حي_الفاضلية #مكاتب_هناجر #سندويش_بنل</div>
@@ -338,7 +553,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/C5BwNtdF/5361556363529621862-121.jpg" alt="هناجر ضخمة">
+            <img src="https://i.postimg.cc/C5BwNtdF/5361556363529621862-121.jpg" alt="هناجر ومستودعات كبرى حي الرياض">
             <div class="h-info">
                 <p class="h-price">أرخص تنفيذ هناجر ومستودعات كبرى</p>
                 <div class="h-tags">#حي_الرياض #مقاولات_عامة #بناء_حديد</div>
@@ -346,7 +561,7 @@
         </div>
 
         <div class="h-card">
-            <img src="https://i.postimg.cc/tJZ95f7C/5361556363529621863-119.jpg" alt="مخازن الأحساء">
+            <img src="https://i.postimg.cc/tJZ95f7C/5361556363529621863-119.jpg" alt="مخازن حديد حي الزهور">
             <div class="h-info">
                 <p class="h-price">أرخص مقاول مخازن ومستودعات</p>
                 <div class="h-tags">#حي_الزهور #مخازن_حديد #سندويش_بنل</div>
@@ -356,44 +571,23 @@
     </div>
 </section>
 
-<style>
-    .hangar-grid-container { padding: 30px 10px; background: #fff; }
-    .h-grid { display: grid; grid-template-columns: 1fr; gap: 35px; max-width: 900px; margin: 0 auto; }
-    
-    .h-card { 
-        background: #fdfdfd; 
-        border-radius: 20px; 
-        overflow: hidden; 
-        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-        border: 1px solid #eee;
-        transition: transform 0.3s;
-    }
-
-    .h-card img { width: 100%; height: auto; display: block; border-bottom: 4px solid #0a1d37; }
-    .h-info { padding: 20px; text-align: right; }
-    .h-price { color: #27ae60; font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; }
-    .h-tags { color: #c5a059; font-size: 0.85rem; font-weight: bold; line-height: 1.6; }
-
-    .h-card:hover { transform: translateY(-5px); }
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- التذييل -->
 <footer class="industrial-footer">
     <div class="f-container">
-        
         <div class="f-brand-box">
-            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="Logo" class="footer-logo">
+            <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="شعار مظلات وسواتر الهفوف" class="footer-logo">
             <h3>مظلات وسواتر الهفوف 2026</h3>
             <p>مقاولات الهناجر والمستودعات بالأحساء</p>
         </div>
 
         <div class="f-social-box">
-            <p class="social-label">:تواصل معنا عبر منصاتنا</p>
+            <p class="social-label">تواصل معنا عبر منصاتنا:</p>
             <div class="social-icons-row">
-                <a href="https://www.tiktok.com/@ahsa.shades" class="icon-circle tiktok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/al_ahsa_mizalaat" class="icon-circle insta"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/solomons456" class="icon-circle x-twitter"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/share/17bH96Jg11/" class="icon-circle facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/966552075677" class="icon-circle whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@ahsa.shades" target="_blank" class="icon-circle tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/al_ahsa_mizalaat" target="_blank" class="icon-circle insta" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/solomons456" target="_blank" class="icon-circle x-twitter" title="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/share/17bH96Jg11/" target="_blank" class="icon-circle facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/966552075677" target="_blank" class="icon-circle whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -402,75 +596,14 @@
             <p>© 2026 جميع الحقوق محفوظة | مقاولات الأحساء الكبرى</p>
             <a href="tel:0552075677" class="footer-phone">0552075677</a>
         </div>
-
     </div>
 </footer>
 
-<style>
-    .industrial-footer {
-        background: #0a1d37;
-        color: #fff;
-        padding: 40px 20px 100px; /* مساحة تحت للجوال */
-        text-align: center;
-        border-top: 4px solid #c5a059;
-    }
+<!-- أزرار التواصل الثابتة -->
+<div class="contact-bar">
+    <a href="https://wa.me/966552075677" class="c-btn wa" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="tel:0552075677" class="c-btn ph"><i class="fas fa-phone"></i> اتصل الآن</a>
+</div>
 
-    .footer-logo {
-        height: 70px;
-        border-radius: 12px;
-        margin-bottom: 10px;
-    }
-
-    .f-brand-box h3 { color: #c5a059; margin: 5px 0; font-size: 1.2rem; }
-    .f-brand-box p { color: #ccc; font-size: 0.85rem; }
-
-    .social-label { margin: 25px 0 15px; font-weight: bold; }
-
-    .social-icons-row {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-bottom: 30px;
-    }
-
-    /* تصميم الدوائر لتكون بارزة */
-    .icon-circle {
-        width: 48px;
-        height: 48px;
-        background: #fff; /* خلفية بيضاء لتبرز الأيقونات الملونة */
-        color: #0a1d37;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-        text-decoration: none;
-        transition: 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    /* ألوان الأيقونات عند التمرير أو النقر */
-    .whatsapp { color: #25D366; }
-    .tiktok { color: #000000; }
-    .insta { color: #E1306C; }
-    .x-twitter { color: #000000; }
-    .facebook { color: #1877F2; }
-
-    .icon-circle:active { transform: scale(0.9); }
-
-    .separator-line {
-        height: 1px;
-        background: rgba(255,255,255,0.1);
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .footer-phone {
-        display: block;
-        color: #c5a059;
-        font-size: 1.4rem;
-        font-weight: 900;
-        text-decoration: none;
-        margin-top: 10px;
-    }
-</style>
+</body>
+</html>
